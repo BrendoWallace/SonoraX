@@ -9,58 +9,95 @@
     <title>SonoraX</title>
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./teste.css">
 
 
 </head>
 
 <body>
 
-    <header class="header_logo mt-3 ">
+    <header class="header_logo rounded-5 mx-4  col-10 col-lg-11 d-flex justify-content-between">
 
-        <img class="header_logo_mobile ms-2" src="./IMG/logo_mobile.png" alt="logo SonoraX mobile">
+        <a class="header_logo_mobile h-25 w-50 ms-2 "href="">
+            
+         <img class="header_logo_mobile h-25 w-25 ms-2 mt-1" src="./IMG/logo_mobile.png" alt="logo SonoraX mobile" >
 
- 
-  <img class="header_burguer m-3" src="./IMG/header_icon_buguer.svg" alt="">
+        </a>
+
+ <div id="mySidepanel" class="sidepanel">
+
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <br>
+
+  <hr class="linha">
+
+  <a href="#">Instrumentos</a>
+  <a href="#">Blog</a>
+  <a href="#">Pacotes</a>
+  <a href="#">Ferramentas #dropdown</a>
+
+  <br><br><br> <hr class="linha">
+  <br>
+
+<a class="contato d-flex text-center" href="#">Contatos</a>
+
+
+</div>
+
+<button class="openbtn" onclick="openNav()"> 
+    
+                 <img class="header_burguer m-3" src="./IMG/header_icon_buguer.svg" alt="">
+
+</button>
+
+
+
+       
 
 
     </header>
 
-    <div class="hero_container">
+    <div class="hero_container text-center">
 
-   <img class ="hero01" src="./IMG/hero_img01.png" alt="cara tocando violao">
-   <div class="hero_box">
-     
-   <h2 class="hero_title"> Domine seu Instrumento</h2>
+        <img class="hero01" src="./IMG/hero_img01.png" alt="cara tocando violao">
+        <div class="hero_box w-75 rounded-5 ">
 
-    <p>
+            <h2 class="hero_title"> Domine seu Instrumento</h2>
 
-     Aprenda com os melhores especialistas e
-     leve sua técnica para o próximo nível,
-     no seu próprio ritmo.
+            <br>
 
-     </p>
+            <p>
 
-   <a href="#" class="hero_btn">Pacotes</a>
+                Aprenda com os melhores especialistas e
+                leve sua técnica para o próximo nível,
+                no seu próprio ritmo.
 
-   </div>
-   
-   </div>
-    
+            </p>
+
+            
+     <div>   
 
 
+     <button class="hero_btn">Pacotes</button>
 
 
-
-    </div>
-    
+     </div>
 
 
-
+        </div>
+             </div>
 
 
 
-<script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#6d59ad" fill-opacity="1" d="M0,64L60,58.7C120,53,240,43,360,85.3C480,128,600,224,720,224C840,224,960,128,1080,90.7C1200,53,1320,75,1380,85.3L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#9fb2e9" fill-opacity="1" d="M0,64L60,58.7C120,53,240,43,360,85.3C480,128,600,224,720,224C840,224,960,128,1080,90.7C1200,53,1320,75,1380,85.3L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+
+                <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+                <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+                <script src="./JS/script.js"></script>
 </body>
 
 </html>

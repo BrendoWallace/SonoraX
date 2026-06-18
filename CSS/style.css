@@ -8,14 +8,15 @@
 
 :root{
 
-    --bg-main: #242424;
-    --bg-second: #9fb2e9;
+    --bg: #242424 !important;
+    --bg-second: #9fb2e9 !important;
+    --element: #6d59ad !important;
 
 }
 
 body{
 
-  background-color: var(--bg-main);
+  background-color: var(--bg) ;
 
 }
 
@@ -27,13 +28,13 @@ header{
 }
 .header_logo{
 
-    height: 50px;
+    /* height: 50px; */
     /* width: 300px; */
-    background: #6D59AD;
-    display: flex;
+    background: var(--element);
+    /* display: flex;
     justify-content: space-between;
-    justify-items: center;
-    border-radius: 150px;
+    justify-items: center; */
+    /* border-radius: 150px; */
     box-shadow: 0 4px 15px rgba(0,0,0,0.8);
     /* margin-left: 10px; */
     position:fixed;
@@ -75,15 +76,27 @@ background-color: rgba(0, 0, 0, 0.3);
 
 }
 
-.hero_btn{
 
-background-color: #7b2cff;
-color: white;
-text-decoration: none;
-border-radius: 30px;
-font-weight: bold;
+.header_burguer{
+
+  width: 50px ;
 
 }
+
+.hero_btn{
+ 
+  border: none;
+  background-color: var(--element);
+  text-decoration: none;
+  border-radius: 30px;
+  width: 80px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.10);
+
+
+}
+
 
 
 
