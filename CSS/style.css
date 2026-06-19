@@ -20,12 +20,6 @@ body{
 
 }
 
-header{
-
-    display: flex;
-    justify-content: center;
-
-}
 .header_logo{
 
     /* height: 50px; */
@@ -37,14 +31,13 @@ header{
     /* border-radius: 150px; */
     box-shadow: 0 4px 15px rgba(0,0,0,0.8);
     /* margin-left: 10px; */
-    position:fixed;
-    z-index: 9999;
+
 
 }
 
 .hero01{
-
-    margin-top: 93px;
+ 
+    margin-top: 130px; 
     width: 100%;
 
 }
@@ -77,11 +70,6 @@ background-color: rgba(0, 0, 0, 0.3);
 }
 
 
-.header_burguer{
-
-  width: 50px ;
-
-}
 
 .hero_btn{
  
