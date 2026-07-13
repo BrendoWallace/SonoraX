@@ -5,6 +5,14 @@
     --element: #6d59ad !important;
  
 }
+*{
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
 
 .carousel-caption{
 

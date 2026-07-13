@@ -6,6 +6,15 @@
  
 }
 
+*{
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+
 .box{
 
     display: flex;
@@ -16,7 +25,7 @@
     height: 130px;
     border-radius: 30px;
     box-sizing: border-box;
-    margin: 50px 550px 0px;
+    margin: 50px 390px 0px;
     
 }
 

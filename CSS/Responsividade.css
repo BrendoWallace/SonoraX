@@ -1,3 +1,11 @@
+*{
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
 @media (min-width: 991px) {
 
 
@@ -25,6 +33,45 @@
     
    display: none !important;
 }
+
+
+.img_instru{
+
+width: 90% !important;
+
+
+}
+
+
+/* Caixa dos instrumentos */
+
+
+
+.box_instru{
+
+
+  flex: 0 1 26% !important;
+  background-color: var(--element);
+  height: 430px !important;
+ 
+}
+
+.borda_instru{
+
+    margin-top: 9px !important; 
+    margin-left: -1px !important;
+    width: 100% !important;
+    height: 95%;
+    position: relative;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
 
 
 
@@ -80,7 +127,7 @@ h5{
   border: none;
   border-radius: 30px;
   width: 100px !important;
-  height: 60px !important;
+  height: 45px !important;
   cursor: pointer;
 
 }
@@ -104,7 +151,7 @@ font-size: 15px !important;
 
   width: 100%;
   height: 100%;
-  object-fit: cover;   
+ 
 
 }
 

@@ -3,6 +3,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    
 
 }
 
@@ -18,10 +19,12 @@ body{
 
     background-color: var(--bg) !important;
 
+
 }
 
 .navbar{
 
+    
     background-color: var(--element) !important;
 
 }
@@ -191,4 +194,6 @@ button:hover{
     border: none !important;
    
 }
+
+
 
