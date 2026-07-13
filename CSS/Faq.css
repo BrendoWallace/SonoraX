@@ -1,0 +1,131 @@
+*{
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+.faq-container {
+    
+    width: 95% !important;
+    margin-left: 2.50%;
+    background-color: var(--element);
+    border-radius: 30px !important;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.35) !important;
+}
+
+
+.accordion {
+
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+/* CADA BLOCO DO ACCORDION */
+.accordion-item {
+    background-color: transparent;
+    border: none;
+    border-radius: 22px;
+    overflow: hidden;
+}
+
+/* BOTÃO DA PERGUNTA */
+.accordion-button {
+   
+    width: 100%;
+   
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px !important;
+    font-size: 20px;
+    font-weight: 400;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+}
+
+/* BOTÃO QUANDO ESTÁ ABERTO */
+.accordion-button:not(.collapsed) {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 22px 22px 0 0 !important;
+    box-shadow: none;
+}
+
+/* REMOVE BORDA AZUL AO CLICAR */
+.accordion-button:focus {
+    border: none;
+    box-shadow: none;
+}
+
+/* SETA DO BOOTSTRAP */
+.accordion-button::after {
+    width: 22px;
+    height: 22px;
+    margin-right: 2px;
+    background-size: 22px;
+    filter:
+        brightness(0)
+        saturate(100%)
+        invert(86%)
+        sepia(3%)
+        saturate(110%)
+        hue-rotate(180deg)
+        brightness(90%);
+
+    transition: transform 0.3s ease;
+}
+
+/* ÁREA DA RESPOSTA */
+.accordion-collapse {
+    background-color: #000000;
+}
+
+/* CONTEÚDO DA RESPOSTA */
+.accordion-body {
+    min-height: 280px;
+    padding: 20px 14px;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 0 0 22px 22px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* REMOVE MARGEM DO PARÁGRAFO */
+.accordion-body p {
+    margin: 0;
+}
+
+/* QUANDO O ITEM ESTÁ ABERTO */
+.accordion-item:has(.accordion-collapse.show) {
+    background-color: #000000;
+    border-radius: 22px;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.35);
+}
+
+
+/* RESPONSIVIDADE */
+@media (max-width: 480px) {
+
+
+    .faq-container {
+        width: 100%;
+       
+     
+        padding: 38px 30px;
+    }
+
+    .accordion {
+        gap: 38px;
+    }
+
+    .accordion-button {
+        font-size: 18px;
+    }
+
+    .accordion-body {
+        min-height: 250px;
+    }
+}
