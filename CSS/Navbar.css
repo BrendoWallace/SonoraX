@@ -1,0 +1,194 @@
+*{
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+:root{
+ 
+    --bg: #242424 !important;
+    --bg-second: #9fb2e9 !important;
+    --element: #6d59ad !important;
+ 
+}
+ 
+body{
+
+    background-color: var(--bg) !important;
+
+}
+
+.navbar{
+
+    background-color: var(--element) !important;
+
+}
+
+.offcanvas{
+
+    background-color: var(--element) !important;
+    border-radius: 30px;
+    width: 250px !important;
+    
+}
+.offcanvas-header{
+
+    background-color: var(--element) !important;
+    border-top-left-radius: 30px;
+    padding-top: 40px !important;
+    padding-left: 40px !important;
+}
+
+.offcanvas-body{
+
+
+   background-color: var(--element) !important;
+   border-bottom-left-radius: 30px;
+
+}
+
+.logo_header{
+
+    height: 63px;
+    
+
+}
+
+.navbar-brand{
+
+    height: 0px;
+
+}
+
+.navbar{
+
+    height: 70px;
+
+}
+
+.navbar-nav{
+
+    gap: 20px !important;
+
+}
+
+.close{
+
+    margin-top: 5px;
+    height: 30px;
+    border: none !important;
+    background-color: var(--element);
+
+}
+
+button{
+
+    border: none !important;
+
+}
+
+.dropdown-menu{
+
+    height: 115px !important;
+    width: 176px !important;  
+    background-color: var(--bg-second) !important;
+
+}
+
+.dropdown-item:hover{
+
+    background-color: var(--bg-second) !important;
+    color: var(--element)!important;
+    border-radius: 35px;
+
+}
+
+.dropdown-item{
+
+    color: white !important;
+    width: 25px !important;  
+
+}
+
+.nav-link{
+
+    color: white !important;
+    font-size: 18px !important;
+
+}
+
+.login{
+
+    width: 40px;
+    background-color: var(--element);
+
+}
+
+.butao{
+
+    display: flex;
+    align-content: row;
+    gap: 110px;
+    background-color: var(--element);
+    
+}
+
+.contato{
+
+    color: white !important;
+    font-size: 18px !important;
+    text-decoration: none;
+    padding-left: 65px;
+
+}
+
+.linha{
+
+    border: 3px solid var(--bg-second);
+    opacity: 100%;
+    border-radius: 35px;
+
+}
+
+.icon_contato{
+
+    display: flex;
+    align-content: row;
+    width: 150px;
+    margin-left: 17px;
+
+}
+
+.icon_logo{
+    
+    width: 150px !important;
+    margin-left: 12px;
+
+}
+
+.navbar-toggler{
+
+
+    border: none !important;
+    width: 70px;
+    margin-bottom: 10px;
+
+
+    
+}
+
+.navbar-toggler:hover{
+
+    border: #6d59ad !important;
+    
+
+}
+
+button:hover{
+
+    border: none !important;
+   
+}
+

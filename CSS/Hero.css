@@ -1,0 +1,41 @@
+:root{
+ 
+    --bg: #242424 !important;
+    --bg-second: #9fb2e9 !important;
+    --element: #6d59ad !important;
+ 
+}
+
+.carousel-caption{
+
+
+    background-color: rgba(0,0,0,0.5) !important;
+    font-weight: bold;
+    width: auto;
+    height: auto;
+
+   
+}
+.img_carol{
+
+    margin-top: 35px !important;
+    margin: auto;
+    width: 95%;
+    height: 820px;
+    object-fit: cover !important;
+
+}
+h5{
+
+        font-weight: bold;
+}
+.botao{
+
+    background-color: var(--element) !important;
+    border-radius: 30px;
+    width: 90px;
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    
+}

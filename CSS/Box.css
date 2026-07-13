@@ -1,0 +1,44 @@
+:root{
+ 
+    --bg: #242424 !important;
+    --bg-second: #9fb2e9 !important;
+    --element: #6d59ad !important;
+ 
+}
+
+.box{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--bg-second);
+    width: 55%;
+    height: 130px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    margin: 50px 550px 0px;
+    
+}
+
+.botao_hero {
+  background-color: var(--element);
+  border: none;
+  border-radius: 30px;
+  width: 18%;
+  height: 64px;
+  cursor: pointer;
+
+}
+
+.botao_hero a {
+  
+  color: #ffffff;
+  text-decoration: none;
+ 
+}
+.cu{
+
+font-size: 30px;
+
+
+}

@@ -1,0 +1,114 @@
+@media (min-width: 991px) {
+
+
+.linha{
+
+  display: none !important;
+
+}
+
+.contato{
+
+
+  display: none !important;
+
+
+}
+.icon_contato{
+
+
+  display: none !important;
+
+
+}
+.icon_logo{
+    
+   display: none !important;
+}
+
+
+
+}
+
+@media (max-width: 991px) {
+
+  .img_carol{
+
+   margin-top: 15px !important;
+   margin: auto!important;
+   height: 350px !important;
+   width: 100% !important;
+   
+
+}
+.carousel-caption{
+
+  
+    background-color: rgba(0,0,0,0.5) !important;
+    font-weight: none !important;
+    font-size: smaller !important;
+    width: auto !important;
+    height: auto !important;
+
+    object-fit: cover !important; 
+    object-position: center !important; 
+
+   
+}
+h5{
+
+   font-size:medium !important;
+
+}
+
+.logo_header{
+
+    height: 60px;
+    margin-left: 2px;
+
+}
+.box{
+
+   width: 100% !important;
+   height: 100px !important;
+   margin: 50px 0px 0px !important;
+
+}
+
+.botao_hero {
+  background-color: var(--element);
+  border: none;
+  border-radius: 30px;
+  width: 100px !important;
+  height: 60px !important;
+  cursor: pointer;
+
+}
+
+.botao_hero a {
+  
+  color: #ffffff;
+  text-decoration: none;
+  
+  
+ 
+}
+.cu{
+
+font-size: 15px !important;
+
+
+}
+
+.zz{
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   
+
+}
+
+
+}
+
+
