@@ -43,6 +43,89 @@ width: 90% !important;
 }
 
 
+
+/* FAQ  */
+
+
+
+.faq-container {
+
+    max-width: 100% !important;
+    width: 80% !important;
+    background-color: var(--element);
+  
+
+}
+
+.accordion-button {
+   
+
+    max-width: 100% !important;
+    width: 80% !important;
+    margin-top: 3%;
+    margin-left: 10%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+
+}
+.accordion {
+
+height: 650px !important;
+
+}
+
+.accordion-body {
+
+    min-height: 100px !important;
+    border-radius: 0 0 22px 22px;
+    font-size: 16px;
+    line-height: 1.6;
+   
+
+
+}
+
+.accordion-item:has(.accordion-collapse.show) {
+
+    background-color: var(--element) !important;
+    border-radius: 22px;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0) !important;
+}
+
+.accordion-collapse {
+
+   width: 80%;
+   margin-left: 154px;
+    
+}
+
+.faq-container {
+    
+
+    margin-left: 2.50%;
+
+}
+
+
+.faq-container {
+    
+
+    margin-left: 10% !important;
+
+}
+
+
+
+
+
+/* FOOTER */
+
+
+
+
+
+
+
+
 /* Caixa dos instrumentos */
 
 
