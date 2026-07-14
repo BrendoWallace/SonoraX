@@ -1,80 +1,103 @@
-*{
-
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-
+.footer {
+    background: var(--element);
+    padding: 70px 0 30px;
+    margin-top: 80px;
+    border-top: 2px solid var(--bg-second);
 }
 
-.footer{
 
-   background-color: var(--element) !important;
-
+.footer-logo {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
-.teste{
 
-  text-decoration: none;
-  color: white;
-  font-size: 17px !important;
+.footer-text {
+    color: white;
+    line-height: 1.7;
+    max-width: 320px;
+}
+
+
+.footer-title {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.footer-title2 {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+     margin-left: 14% !important;
+}
+
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-social {
+
+    display: flex;
+    gap: 15px;
   
 
 }
-.texto{
 
-    font-size: 30px !important;
-}
+.footer-social a {
 
-.logo_footer{
-
-   width: 150px;
-   margin-left: 24%;
-
-}
-
-.lista_nav{
-
-    margin-left: 32%;
-
-}
-.titulo_footer{
-
-margin-left: 23%;
-color: white;
-font-weight: bold;
-
-}
-
-.titulo_footer2{
-
-    margin-left: 35%;
-    color: white;
-    font-weight: bold;
-
-}
-
-.icon_footer{
-    
-
-    max-width: 100%;
-    max-height: 100%;
-    width: 100px;
-     display: flex;
-        gap: 15px !important;
-
-
-}
-
-.box_icon{
-
+    width: 45px;
+    height: 45px;
+    background: #1f2937;
+    border-radius: 50%;
     display: flex;
-
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    text-decoration: none !important;
 }
 
-.imgas{
+.footer-social a:hover {
+    background: var(--bg-second);
+    transform: translateY(-3px);
+}
 
-    margin-left: -260%;
+
+.footer-bottom {
+
+    border-top: 1px solid var(--bg-second) !important;
     margin-top: 50px;
-    width: 50px !important;
-    
+    padding-top: 25px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #9ca3af;
+    margin: 0;
+}
+
+.img_footer {
+
+    width: 80% !important;
 }

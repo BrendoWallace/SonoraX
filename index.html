@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="./teste.css">
   <link rel="stylesheet" href="./CSS/Faq.css">
   <link rel="stylesheet" href="./CSS/Footer.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
 </head>
 
@@ -186,19 +187,19 @@
 
   <button class="botao_hero">
 
-     <a class="cu" href="">Instrumentos</a>
+     <a class="texto_hero" href="">Instrumentos</a>
 
    </button>
   
   <button class="botao_hero">
 
-     <a class="cu" href="">Ferramentas</a>
+     <a class="texto_hero" href="">Ferramentas</a>
     
    </button>
 
   <button class="botao_hero"> 
 
-     <a class="cu" href="">Blog</a> 
+     <a class="texto_hero" href="">Blog</a> 
     
    </button>
 
@@ -207,7 +208,7 @@
 
  <div class="baixo">
 
- <img class="zz" src="./IMG/ondas.png" alt="">
+ <img class="onda" src="./IMG/ondas.png" alt="">
 
 
 
@@ -268,141 +269,138 @@
 
  </div>
 
- <section class="faq-container mt-5">
+ </div>
 
-        <div class="accordion" id="faqAccordion">
+<img class="onda" src="./IMG/ondas_virada.png" alt="">
 
-            <div class="accordion-item">
+ <section class="faq-container">
 
-                <h2 class="accordion-header">
+    <details class="faq-item" open>
 
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#resposta1" aria-expanded="false" aria-controls="resposta1">
-                        Perguntas
-                    </button>
+        <summary class="faq-pergunta">
+            Perguntas
+        </summary>
 
-                </h2>
-
-                <div id="resposta1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-
-                    <div class="accordion-body">
-                        Aqui ficará a resposta da primeira pergunta.
-                    </div>
-
-                </div>
-
-            </div>
-            
-            <div class="accordion-item">
-
-                <h2 class="accordion-header">
-
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#resposta2"
-                        aria-expanded="true" aria-controls="resposta2">
-                        O site é bom?
-                    </button>
-
-                </h2>
-
-                <div id="resposta2" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-
-                    <div class="accordion-body">
-
-                        <p>
-                            Sim!
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="accordion-item">
-
-                <h2 class="accordion-header">
-
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#resposta3" aria-expanded="false" aria-controls="resposta3">
-                        Perguntas
-                    </button>
-
-                </h2>
-
-                <div id="resposta3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-
-                    <div class="accordion-body">
-                        Aqui ficará a resposta da terceira pergunta.
-                    </div>
-
-                </div>
-
-            </div>
-
+        <div class="faq-resposta">
+            <p>Aqui ficará a resposta da primeira pergunta.</p>
         </div>
 
-    </section>
+    </details>
+
+
+    <details class="faq-item">
+
+        <summary class="faq-pergunta">
+            O site é bom?
+        </summary>
+
+        <div class="faq-resposta">
+            <p>
+                Sim! É os guri
+            </p>
+        </div>
+
+    </details>
+
+
+    <details class="faq-item">
+
+        <summary class="faq-pergunta">
+            Perguntas
+        </summary>
+
+        <div class="faq-resposta">
+            <p>Aqui ficará a resposta da terceira pergunta.</p>
+        </div>
+
+    </details>
+
+</section>
 
     
 
-<div class="footer d-flex justify-content-center mt-5">
-<footer class="footer-senac mt-5 py-2">
-    <div class="container">
-        <div class="row gy-3">
-            <div class="">
-                <img src="./IMG/image 2.webp" alt="Logo" class=" logo_footer mb-2">
-            </div>
+<footer class="footer" id="contato">
 
-            <div class="texto">
-                <h6 class="titulo_footer text-uppercase fw-bold">Navegador do Site</h6>
-                <ul class="lista_nav list-unstyled">
+        <div class="container">
 
-                    <li><a class="teste" href="index.php">Instrumentos</a></li>
-                <a class="teste nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Ferramentas
-              </a>
+            <div class="row gy-5">
 
+             
+                <div class="footer_img col-12 col-lg-4">
 
-              <ul class="dropdown-menu rounded-5">
+                    <div class="footer-brand">
 
-                <li><a class="dropdown-item" href="#">Metronomo</a></li>
-                <li><a class="dropdown-item" href="#">Gerador de acordes</a></li>
-                <li><a class="dropdown-item" href="#">Afinador</a></li>
+                      <a href=""> <img class="img_footer" src="./IMG/image 2.webp" alt=""></a>
 
-              </ul>
-                    <li><a class="teste" href="admin_itens.php">Blog</a></li>
-
-                </ul>
-            </div>
-
-            <div class="box_icon">
-                <h6 class="titulo_footer2 text-uppercase">Contato</h6>
-
-                <div class="icon_footer list-unstyled small " >
-
-                  <a class="" href=""><img class="imgas" src="./IMG/icon_insta.svg" alt=""></a>
-                  <a class="" href=""><img class="imgas" src="./IMG/icon_face.svg" alt=""></a>
-                  <a class="" href=""><img class="imgas" src="./IMG/icon_twitter.svg" alt=""></a>
+                    </div>
 
                 </div>
+
+              
+                <div class="col-6 col-md-6 col-lg-2">
+
+                    <h5 class="footer-title">Navegação</h5>
+
+                    <ul class="footer-links">
+
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="catalogo.html">Pacotes</a></li>
+                        <li><a href="#produtos">Instrumentos</a></li>
+                        <li><a href="#catalogo">Ferramentas</a></li>
+                        <li><a href="#catalogo">Blog</a></li>
+
+                    </ul>
+
+                </div>
+
+            
+                <div class="col-6 col-md-6 col-lg-2">
+
+                    <h5 class="footer-title">Suporte</h5>
+
+                    <ul class="footer-links">
+
+                        <li><a href="sobrenos.html#sobre-nos">Sobre Nós</a></li>
+                        <li><a href="#">Perguntas Frequentes</a></li>
+
+                    </ul>
+
+                </div>
+
+                
+                <div class="col-12 col-lg-4">
+
+                    <h5 class="footer-title2">Redes sociais</h5>
+
+                    <div class="footer-social">
+
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-discord"></i></a>
+
+                    </div>
+
+                </div>
+
             </div>
+
+
+            <div class="footer-bottom">
+                <p>© 2026 SonoraX. Todos os direitos reservados.</p>
+            </div>
+
         </div>
 
-     
-
-
-    </div>
-    </div>
-</footer>
+    </footer>
 
 
   
-</div>
 
 
 
- </div>
+
+ 
 
 
  <script src="./JS/Script.js" ></script>

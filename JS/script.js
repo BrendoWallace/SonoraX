@@ -3,7 +3,7 @@ const boxes = document.querySelectorAll('.box_instru');
 boxes.forEach((box) => {
 
   box.addEventListener('mouseenter', () => {
-    box.style.transform = 'rotate(30deg)';
+    box.style.transform = 'rotate(40deg)';
   });
 
 
