@@ -17,7 +17,7 @@
 
 .baixo{
 
-  background-color: var(--bg-second);
+  background-color: var(--bg-second) !important;
   overflow: hidden;
 
 }
