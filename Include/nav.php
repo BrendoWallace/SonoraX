@@ -1,125 +1,114 @@
-    <!DOCTYPE html>
-    <html lang="pt-br">
-    <head>
-
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Matricula Aluno Curso</title>
-
-        
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="./style2.css">
-    <link rel="stylesheet" href="./estilo.css">
-
-    </head>
-    <body>
-
 <header>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
+    
+    <nav class="navbar rounded-5 mx-3 mt-3 navbar-expand-lg ">
+    <div class="container-fluid">
 
-            <a class="teste" href="./index.html">Home</a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrincipal">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse menu-area" id="navbarPrincipal">
-                <ul class="navbar-nav dropdown-wrapper">
+      <a class="aa" href="./index.html">
 
 
-                    <li class="nav-item dropdown">
-                        <button class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown">
-                            Cadastros
-                        </button>
-
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./formulario.html">Cadastro de aluno</a></li>
-                            <li><a class="dropdown-item" href="./form_curso.html">Cadastro de curso</a></li>
-                            <li><a class="dropdown-item" href="./matricula.php">Matricula em curso</a></li>
-                        </ul>
-                    </li>
+        <img class="logo_header" src="./IMG/image 2.webp" alt="">
 
 
-                    <li class="nav-item dropdown">
-                        <button class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown">
-                            Relatórios
-                        </button>
+      </a>
+      <button class="navbar-toggler border-0 border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler"> <img src="./IMG/header_icon_buguer.svg" alt=""></span>
+      </button>
+      <div class="offcanvas  offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header ">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
 
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./matriculados.php">Tabela de matriculados</a></li>
-                            <li><a class="dropdown-item" href="./nao_matriculados.php">Não matriculados</a></li>
-                            <li><a class="dropdown-item" href="./qtd_matriculados.php">Qtd matriculados em cursos</a></li>
-                            <li><a class="dropdown-item" href="./matriculado_mes.html">Qnt de matriculados em MES selecionado</a></li>
-                        </ul>
-                    </li>
+          <button type="button" class="butao" data-bs-dismiss="offcanvas" aria-label="Close">
+
+            <img class="close" src="./IMG/icon_Xcópia.svg" alt="">
+
+            <img class="login" src="./IMG/login_icon3.svg" alt="">
 
 
- 
-                    <li class="nav-item dropdown">
-                        <button class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown">
-                            Alterações
-                        </button>
-
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./excluir_aluno.php">Excluir Aluno</a></li>
-                            <li><a class="dropdown-item" href="./excluir_matricula.php">Excluir Matricula</a></li>
-                            <li><a class="dropdown-item" href="./form_edita_aluno.php">Editar Aluno</a></li>
-                        </ul>
-                    </li>
-
-                </ul>
-            </div>
+          </button>
 
         </div>
-    </nav>
-
-</header>
 
 
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+
+              <hr class="linha">
+
+              <a class="nav-link active" aria-current="page" href="#">Instrumentos</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Ferramentas
+              </a>
+
+
+              <ul class="dropdown-menu rounded-5">
+
+                <li><a class="dropdown-item" href="#">Metronomo</a></li>
+                <li><a class="dropdown-item" href="#">Gerador de acordes</a></li>
+                <li><a class="dropdown-item" href="#">Afinador</a></li>
+
+              </ul>
+
+
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blogs</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pacotes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre Nós</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Perguntas Frequentes</a>
+            </li>
+
+            <hr class="linha">
+
+            <li class="nav-item">
+              <a class="contato" href="#">Contatos</a>
+            </li>
+
+            <div class="icon_contato">
+
+              <a class="icon_contato" href="">
+
+                <img src="./IMG/icon_insta.svg" alt="">
+
+              </a>
+              <a class="icon_contato" href="">
+
+                <img src="./IMG/icon_twitter.svg" alt="">
+
+              </a>
+              <a class="icon_contato" href="">
+
+                <img src="./IMG/icon_face.svg" alt="">
+
+              </a>
+
+            </div>
+
+
+            <a class="icon_logo" href="">
+
+              <img class="icon_logo" src="./IMG/image 2.webp" alt="">
+
+            </a>
 
 
 
-</div>
+          </ul>
 
-<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-        
-    </body>
-    </html>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-
-
-
-<?php
- 
-    include 'conexao.php';
- 
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
- 
-        $id_aluno = $_POST['id_aluno'];
-        $id_curso = $_POST['id_curso'];
-        $data_matricula = date('Y-m-d');
- 
-        $sql = "INSERT INTO Matricula (id_aluno, id_curso, data_matricula) VALUES (?, ?, ?)";
- 
-        if ($stmt = $conexao->prepare($sql)) {
- 
-            $stmt->bind_param("iis", $id_aluno, $id_curso, $data_matricula);
- 
-            if ($stmt->execute()) {
-                echo "<div class='form-container'> <h2>Matrícula cadastrada com SUCESSO</h2> </div>"   ;
-            } else {
-                
-                echo "Erro ao cadastrar a matrícula: " . $stmt->error;
-            }
- 
-            $stmt->close();
-        } else {
-            echo "Erro ao preparar a consulta: " . $conexao->error;
-        }
-    }
- 
-    $conexao->close();
- 
-    ?>
-
+ </header>
