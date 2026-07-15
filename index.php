@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="./CSS/teste.css">
   <link rel="stylesheet" href="./CSS/Faq.css">
   <link rel="stylesheet" href="./CSS/Footer.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
 </head>
 
@@ -96,6 +96,8 @@
 
  <div class="baixo">
 
+
+ <div></div>
 
  <img class="onda" src="./IMG/ondas.png" alt="">
 
@@ -206,7 +208,7 @@
 
     </details>
 
-  </section>
+</section>
 
 
   <?php include 'include/footer.php'; ?>

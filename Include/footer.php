@@ -65,9 +65,11 @@
         </div>
 
 
-        <div class="footer-bottom">
-            <p>© 2026 SonoraX. Todos os direitos reservados.</p>
-        </div>
+            <div class="footer-bottom">
+                
+                <p>© 2026 SonoraX. Todos os direitos reservados.</p>
+
+            </div>
 
     </div>
 
