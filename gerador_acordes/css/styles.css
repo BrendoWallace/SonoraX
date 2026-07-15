@@ -1,0 +1,372 @@
+.hidden {
+  display: none;
+}
+ 
+body {
+  color: rgb(215, 215, 228);
+  text-align: center;
+}
+ 
+.option-button {
+  margin-top: 100px !important;
+  color: rgb(39, 40, 41);
+  border-radius: 30px;
+  background-color: var(--bg-second);
+  font-size: 16px;
+  margin: 6px 10px;
+  padding: 8px 18px;
+  border: none;
+}
+ 
+.option-button.selected {
+  background-color: var(--element);
+  color: white;
+}
+ 
+.toggleA-button {
+  color: rgb(215, 215, 228);
+  border-radius: 10px;
+  background-color: var(--bg);
+  border: 1px solid var(--element);
+  font-size: 35px;
+  width: 45px;
+  height: 45px;
+}
+ 
+.toggleA-button:active {
+  background-color: var(--element);
+}
+ 
+.toggleA-button.selected {
+  background-color: var(--element);
+}
+ 
+.toggleB-button {
+  color: rgb(215, 215, 228);
+  border-radius: 10px;
+  background-color: var(--bg);
+  border: 1px solid var(--element);
+  font-size: 35px;
+  width: 45px;
+  margin: 4px;
+}
+ 
+.toggleB-button:active {
+  background-color: var(--element);
+}
+ 
+.toggleB-button.selected {
+  background-color: var(--element);
+}
+ 
+.output-button {
+  color: white;
+  border-radius: 30px;
+  background-color: var(--element);
+  border: none;
+  font-size: 16px;
+  padding: 10px 22px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+ 
+.output-button:hover {
+  background-color: var(--bg-second);
+  color: rgb(39, 40, 41);
+}
+ 
+.output-button:active {
+  background-color: var(--bg-second);
+  transform: scale(0.96);
+}
+ 
+.chord-button {
+  color: rgb(215, 215, 228);
+  border-radius: 10px;
+  background-color: var(--bg);
+  border: 1px solid var(--element);
+  font-size: 13px;
+  height: 50px;
+  margin: 5px;
+  line-height: 15px;
+}
+ 
+.chord-button:active {
+  background-color: var(--element);
+}
+ 
+.shift-button {
+  color: rgb(215, 215, 228);
+  border-radius: 10px;
+  background-color: var(--bg);
+  border: 1px solid var(--element);
+  font-size: 13px;
+  height: 50px;
+  margin: 5px;
+  line-height: 15px;
+}
+ 
+.shift-button:active {
+  background-color: var(--element);
+}
+ 
+.chord-select {
+  color: white;
+  border-radius: 10px;
+  background-color: var(--element);
+  border: 0px solid var(--bg-second);
+  font-size: 20px;
+  margin: 10px;
+  padding: 8px 14px;
+}
+ 
+.custom-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ 
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 27px;
+}
+ 
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+ 
+.slider {
+  border: 1px solid white;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+ 
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 21px;
+  width: 21px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+ 
+input:checked + .slider {
+  background-color: var(--element);
+}
+ 
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--element);
+}
+ 
+input:checked + .slider:before {
+  -webkit-transform: translateX(21px);
+  -ms-transform: translateX(21px);
+  transform: translateX(21px);
+}
+ 
+.slider.round {
+  border-radius: 27px;
+}
+ 
+.slider.round:before {
+  border-radius: 50%;
+}
+ 
+img {
+  max-width: 100%;
+  height: auto;
+}
+ 
+.titulo_topo {
+  margin-top: 60px;
+  color: white;
+  font-weight: 800;
+  text-align: center;
+  font-size: clamp(1.4rem, 4vw, 2.2rem);
+  padding: 0 20px;
+}
+ 
+.titulo {
+  margin-top: 60px;
+  color: black;
+  font-weight: 800;
+  text-align: center;
+  font-size: clamp(1.3rem, 3.5vw, 2rem);
+  padding: 0 20px;
+}
+ 
+.texto {
+  margin: 20px auto 0;
+  color: black;
+  font-size: clamp(1rem, 2.2vw, 1.375rem);
+  max-width: 900px;
+  width: 90%;
+  text-align: center;
+  line-height: 1.6;
+}
+ 
+.progressoes-secao {
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+ 
+.progressao-bloco {
+  width: 100%;
+  max-width: 640px;
+}
+ 
+.progressao-titulo {
+  text-align: center;
+  color: black;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 28px;
+  font-size: 2.4rem;
+}
+ 
+.progressao-tabela {
+  background-color: var(--element);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+ 
+.progressao-linha {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 24px 32px;
+  border-bottom: 2px solid #000000;
+}
+ 
+.progressao-linha:last-child {
+  border-bottom: none;
+}
+ 
+.progressao-linha span {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+ 
+@media (max-width: 767px) {
+  .option-button {
+    margin-top: 50px !important;
+    font-size: 14px;
+    padding: 7px 14px;
+    margin: 5px 6px;
+  }
+ 
+  .toggleA-button {
+    width: 40px;
+    height: 40px;
+    font-size: 28px;
+  }
+ 
+  .toggleB-button {
+    width: 40px;
+    font-size: 28px;
+  }
+ 
+  .chord-select {
+    font-size: 16px;
+    width: 85%;
+    max-width: 300px;
+    margin: 8px auto;
+  }
+ 
+  #ScaleButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+ 
+@media (max-width: 700px) {
+  .progressao-titulo {
+    font-size: 1.9rem;
+  }
+ 
+  .progressao-linha {
+    padding: 18px 20px;
+  }
+ 
+  .progressao-linha span {
+    font-size: 1.15rem;
+  }
+}
+ 
+@media (max-width: 600px) {
+  .titulo_topo,
+  .titulo {
+    margin-top: 40px;
+  }
+ 
+  .texto {
+    width: 100%;
+    margin-top: 16px;
+  }
+}
+ 
+@media (max-width: 480px) {
+  .option-button {
+    display: block;
+    width: 85%;
+    max-width: 280px;
+    margin: 6px auto;
+    font-size: 13px;
+  }
+ 
+  .toggleA-button {
+    width: 34px;
+    height: 34px;
+    font-size: 22px;
+    margin: 2px;
+  }
+ 
+  .toggleB-button {
+    width: 34px;
+    font-size: 22px;
+    margin: 2px;
+  }
+ 
+  .output-button {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+ 
+  .chord-button,
+  .shift-button {
+    font-size: 12px;
+  }
+ 
+  .progressao-titulo {
+    font-size: 1.6rem;
+  }
+ 
+  .progressao-linha {
+    padding: 14px 12px;
+  }
+ 
+  .progressao-linha span {
+    font-size: 0.95rem;
+  }
+}
+ 

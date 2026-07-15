@@ -96,7 +96,39 @@
 
   <div class="baixo">
 
+<<<<<<< HEAD
     <img class="onda" src="./IMG/ondas.png" alt="">
+=======
+ <div class="box">
+
+  <button class="botao_hero">
+
+     <a class="texto_hero" href="">Instrumentos</a>
+
+   </button>
+  
+  <button class="botao_hero">
+
+     <a class="texto_hero" href="">Ferramentas</a>
+    
+   </button>
+
+  <button class="botao_hero"> 
+
+     <a class="texto_hero" href="">Blog</a> 
+    
+   </button>
+
+  
+ </div>
+
+ <div class="baixo">
+
+
+ <div></div>
+
+ <img class="onda" src="./IMG/ondas.png" alt="">
+>>>>>>> 717de4e26c241b00d6dbe56b1172e594286cb451
 
 
 
@@ -206,6 +238,7 @@
     </details>
 
   </section>
+
 
   <?php include 'include/footer.php'; ?>
 
