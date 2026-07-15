@@ -1,41 +1,42 @@
-* {
+*{
 
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    
 
 }
 
-:root {
-
+:root{
+ 
     --bg: #242424 !important;
     --bg-second: #9fb2e9 !important;
     --element: #6d59ad !important;
-
+ 
 }
-
-body {
+ 
+body{
 
     background-color: var(--bg) !important;
 
+
 }
 
-.navbar {
+.navbar{
 
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    
     background-color: var(--element) !important;
 
 }
 
-.offcanvas {
+.offcanvas{
 
     background-color: var(--element) !important;
     border-radius: 30px;
     width: 250px !important;
-
+    
 }
-
-.offcanvas-header {
+.offcanvas-header{
 
     background-color: var(--element) !important;
     border-top-left-radius: 30px;
@@ -43,40 +44,40 @@ body {
     padding-left: 40px !important;
 }
 
-.offcanvas-body {
+.offcanvas-body{
 
 
-    background-color: var(--element) !important;
-    border-bottom-left-radius: 30px;
+   background-color: var(--element) !important;
+   border-bottom-left-radius: 30px;
 
 }
 
-.logo_header {
+.logo_header{
 
     height: 63px;
-
+    
 
 }
 
-.navbar-brand {
+.navbar-brand{
 
     height: 0px;
 
 }
 
-.navbar {
+.navbar{
 
     height: 70px;
 
 }
 
-.navbar-nav {
+.navbar-nav{
 
     gap: 20px !important;
 
 }
 
-.close {
+.close{
 
     margin-top: 5px;
     height: 30px;
@@ -85,59 +86,59 @@ body {
 
 }
 
-button {
+button{
 
     border: none !important;
 
 }
 
-.dropdown-menu {
+.dropdown-menu{
 
     height: 115px !important;
-    width: 176px !important;
+    width: 176px !important;  
     background-color: var(--bg-second) !important;
 
 }
 
-.dropdown-item:hover {
+.dropdown-item:hover{
 
     background-color: var(--bg-second) !important;
-    color: var(--element) !important;
+    color: var(--element)!important;
     border-radius: 35px;
 
 }
 
-.dropdown-item {
+.dropdown-item{
 
     color: white !important;
-    width: 25px !important;
+    width: 25px !important;  
 
 }
 
-.nav-link {
+.nav-link{
 
     color: white !important;
     font-size: 18px !important;
 
 }
 
-.login {
+.login{
 
     width: 40px;
     background-color: var(--element);
 
 }
 
-.butao {
+.butao{
 
     display: flex;
     align-content: row;
     gap: 110px;
     background-color: var(--element);
-
+    
 }
 
-.contato {
+.contato{
 
     color: white !important;
     font-size: 18px !important;
@@ -146,7 +147,7 @@ button {
 
 }
 
-.linha {
+.linha{
 
     border: 3px solid var(--bg-second);
     opacity: 100%;
@@ -154,7 +155,7 @@ button {
 
 }
 
-.icon_contato {
+.icon_contato{
 
     display: flex;
     align-content: row;
@@ -163,14 +164,14 @@ button {
 
 }
 
-.icon_logo {
-
+.icon_logo{
+    
     width: 150px !important;
     margin-left: 12px;
 
 }
 
-.navbar-toggler {
+.navbar-toggler{
 
 
     border: none !important;
@@ -178,18 +179,21 @@ button {
     margin-bottom: 10px;
 
 
-
+    
 }
 
-.navbar-toggler:hover {
+.navbar-toggler:hover{
 
     border: #6d59ad !important;
-
+    
 
 }
 
-button:hover {
+button:hover{
 
     border: none !important;
-
+   
 }
+
+
+

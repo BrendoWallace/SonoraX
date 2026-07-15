@@ -3,7 +3,7 @@
     <nav class="navbar rounded-5 mx-3 mt-3 navbar-expand-lg ">
     <div class="container-fluid">
 
-      <a class="aa" href="./index.php">
+      <a class="aa" href="./index.html">
 
 
         <img class="logo_header" src="./IMG/image 2.webp" alt="">
@@ -48,7 +48,7 @@
               <ul class="dropdown-menu rounded-5">
 
                 <li><a class="dropdown-item" href="#">Metronomo</a></li>
-                <li><a class="dropdown-item" href="./gera_acordes.php">Gerador de acordes</a></li>
+                <li><a class="dropdown-item" href="#">Gerador de acordes</a></li>
                 <li><a class="dropdown-item" href="#">Afinador</a></li>
 
               </ul>
@@ -60,10 +60,10 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="pacotes.php">Pacotes</a>
+              <a class="nav-link" href="#">Pacotes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="sobrenos.php">Sobre Nós</a>
+              <a class="nav-link" href="#">Sobre Nós</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Perguntas Frequentes</a>
