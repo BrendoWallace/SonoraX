@@ -60,7 +60,7 @@ const _KDMetronomeInit = {
                 'justify-content': 'center',
                 'align-items': 'center',
                 'align-content': 'center',
-                'border-radius': '3px',
+                'border-radius': '15px',
                 'box-shadow': '0 2px 7px 0 rgba(0, 0, 0, .5)',
                 '-webkit-touch-callout': 'none',
                 '-webkit-user-select': 'none',
@@ -532,7 +532,7 @@ class KDMetronome {
                 const startButton = document.getElementById(_props.domIDs.startButton)
                 if (startButton) {
                     startButton.classList.remove('noTransition') // ensure normal button interactions are affected by animation transitions
-                    startButton.style.backgroundColor = _props.styles.black
+                    startButton.style.backgroundColor = "#9fb2e9"; // desligado
                     startButton.style.opacity = 1
                     startButton.innerHTML = 'off'
                 }
@@ -823,136 +823,3 @@ class KDMetronome {
     }
 
 }
-
-/* ******************** */
-// JSDoc for public API
-
-/**
- * @name KDMetronome#callback
- * @function @memberof KDMetronome
- * @description Sets the function that is run on each metronome tick.
- * @param {function} callback - Pass a function or `'default' ` to revert to the default callback.
- */
-
-/**
- * @name KDMetronome#start
- * @function @memberof KDMetronome
- * @description Start the metronome.
- * @details First stops the metronome if it is already running. Then creates a new web audio context, WAAClock, and recurring
- * timed event that calls `_state.callback()` on each tick. Also handles visual feedback if the default start button exists.
- */
-
-/**
- * @name KDMetronome#stop
- * @function @memberof KDMetronome
- * @description Stop the metronome and clear all controllers. Also resets the tick count.
- */
-
-/**
- * @name KDMetronome#hide
- * @function @memberof KDMetronome
- * @description Hides the UI widget if it exists.
- */
-
-/**
- * @name KDMetronome#show
- * @function @memberof KDMetronome
- * @description Shows the UI widget if it exists.
- */
-
-/**
- * @name KDMetronome#running
- * @function @memberof KDMetronome
- * @returns {boolean} True if the metronome is on.
- */
-
-/**
- * @name KDMetronome#bpm
- * @function @memberof KDMetronome
- * @description Sets the BPM of the metronome and returns the value. Stops the metronome if it is currently running.
- * @param {number=} bpm - Intended beats per minute.
- * @returns {number} Current BPM after function processes.
- * @details Restricts the input parameter to bounds described in `_props.bounds.bpm`. Updates the BPM widget if applicable.
- */
-
-/**
- * @name KDMetronome#volume
- * @function @memberof KDMetronome
- * @description Sets the volume of the metronome and returns the value.
- * @param {number=} volume - Intended volume.
- * @returns {number} Current volume after function processes.
- * @details Restricts the input parameter to bounds described in `_props.bounds.volume`. Updates the volume widget if applicable.
- */
-
-/**
- * @name KDMetronome#frequency
- * @function @memberof KDMetronome
- * @description Sets the center frequency of the default metronome synth and returns the value.
- * @param {number=} hz - Intended frequency in hertz. 
- * @returns {number} Current frequency after function processes.
- * @details Restricts the input parameter to bounds described in `_props.bounds.hz`.
- */
-
-/**
- * @name KDMetronome#triggerSynth
- * @function @memberof KDMetronome
- * @description Trigger a metronome click with the KDMetronome synth.
- */
-
-/**
- * @name KDMetronome#hidden
- * @function @memberof KDMetronome
- * @returns {boolean} True if the metronome widget is hidden.
- */
-
-/**
- * @name KDMetronome#headless
- * @function @memberof KDMetronome
- * @returns {boolean} True if the metronome is in headless mode.
- */
-
-/**
- * @name KDMetronome#ticks
- * @function @memberof KDMetronome
- * @returns {number} The number of ticks that have passed since the metronome was started. 
- */
-
-/**
- * @name KDMetronome#state
- * @function @memberof KDMetronome
- * @returns {object} Object containing current state values.
- */
-
-/**
- * @name KDMetronome#props
- * @function @memberof KDMetronome
- * @returns {object} Object containing instance properties.
- */
-
-/**
- * @name KDMetronome#views
- * @function @memberof KDMetronome
- * @returns {object} Object containing instance views.
- */
-
-/**
- * @name KDMetronome#controllers
- * @function @memberof KDMetronome
- * @returns {object} Object containing current instance controllers.
- */
-
-/**
- * @name KDMetronome#uuid
- * @function @memberof KDMetronome
- * @returns {string} Instance's unique identifier.
- */
-
-/**
- * @name KDMetronome#ready
- * @function @memberof KDMetronome
- * @description Wrap metronome functionality in the callback function in order to ensure all depedencies are loaded, 
- * components are created, and the API is available. Returns the current ready state if no parameter is provided.
- * @param {function=} callback - The function to be run once the instance is ready.
- * @returns {boolean} The current ready state.
- * @example metronome.ready(_ => metronome.bpm(84))
- */

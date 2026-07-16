@@ -60,10 +60,10 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="pacotes.php">Pacotes</a>
+              <a class="nav-link" href="#">Pacotes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="sobrenos.php">Sobre Nós</a>
+              <a class="nav-link" href="#">Sobre Nós</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Perguntas Frequentes</a>
