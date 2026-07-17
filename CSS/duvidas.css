@@ -1,0 +1,77 @@
+:root{
+
+    --bg: #242424 !important;
+    --bg-second: #9fb2e9 !important;
+    --element: #6d59ad !important;
+
+}
+*{
+
+    margin: 0px;
+    padding: 0px;
+
+}
+.titulo{
+
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+hr{
+
+    color: white;
+
+}
+.oi{
+
+    margin-top: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+.onda{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 260px;
+    overflow: visible;
+    z-index: 0;
+
+}
+
+.onda img{
+
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: fill;
+    object-position: center top;
+}
+
+.navbar-container{
+
+
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.onda2{
+
+  width: 100%;
+  height: 100%;
+
+}
