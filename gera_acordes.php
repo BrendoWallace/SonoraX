@@ -48,7 +48,7 @@
 
 
 
-
+<div class="tudo">
 
 
     <button type="button" id="finderOption" class="option-button"
@@ -329,7 +329,7 @@
 
     </div>
 
-
+    
 
     <div id="output"></div>
 
@@ -337,9 +337,14 @@
 
     <div id="popup" class="popup"></div>
 
+    </div>
+    
+
     <div class="baixo">
 
     <img class="onda" src="./IMG/ondas.png" alt="">
+
+    
 
 
 

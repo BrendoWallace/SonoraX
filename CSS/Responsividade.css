@@ -1,66 +1,64 @@
-* {
+*{
 
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 
 }
 
 @media (min-width: 991px) {
 
 
-  .linha {
+.linha{
 
-    display: none !important;
+  display: none !important;
 
-  }
+}
 
-  .contato {
-
-
-    display: none !important;
+.contato{
 
 
-  }
-
-  .icon_contato {
+  display: none !important;
 
 
-    display: none !important;
+}
+.icon_contato{
 
 
-  }
-
-  .icon_logo {
-
-    display: none !important;
-  }
+  display: none !important;
 
 
-  .img_instru {
+}
+.icon_logo{
+    
+   display: none !important;
+}
 
-    width: 90% !important;
+
+.img_instru{
+
+width: 90% !important;
 
 
-  }
+}
 
 
 
-  /* FAQ  */
+/* FAQ  */
 
 
 
-  .faq-container {
+.faq-container {
 
     max-width: 100% !important;
     width: 80% !important;
     background-color: var(--element);
+  
 
+}
 
-  }
-
-  .accordion-button {
-
+.accordion-button {
+   
 
     max-width: 100% !important;
     width: 80% !important;
@@ -68,59 +66,58 @@
     margin-left: 10%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
 
-  }
+}
+.accordion {
 
-  .accordion {
+height: 650px !important;
 
-    height: 650px !important;
+}
 
-  }
-
-  .accordion-body {
+.accordion-body {
 
     min-height: 100px !important;
     border-radius: 0 0 22px 22px;
     font-size: 16px;
     line-height: 1.6;
+   
 
 
+}
 
-  }
-
-  .accordion-item:has(.accordion-collapse.show) {
+.accordion-item:has(.accordion-collapse.show) {
 
     background-color: var(--element) !important;
     border-radius: 22px;
     box-shadow: 0 5px 9px rgba(0, 0, 0, 0) !important;
-  }
+}
 
-  .accordion-collapse {
+.accordion-collapse {
 
-    width: 80%;
-    margin-left: 154px;
+   width: 80%;
+   margin-left: 154px;
+    
+}
 
-  }
-
-  .faq-container {
-
+.faq-container {
+    
 
     margin-left: 2.50%;
 
-  }
+}
 
 
-  .faq-container {
-
+.faq-container {
+    
 
     margin-left: 10% !important;
 
-  }
+}
 
 
 
 
 
-  /* FOOTER */
+/* FOOTER */
 
 
 
@@ -129,22 +126,22 @@
 
 
 
-  /* Caixa dos instrumentos */
+/* Caixa dos instrumentos */
 
 
 
-  .box_instru {
+.box_instru{
 
 
-    flex: 0 1 26% !important;
-    background-color: var(--element);
-    height: 430px !important;
+  flex: 0 1 26% !important;
+  background-color: var(--element);
+  height: 430px !important;
+ 
+}
 
-  }
+.borda_instru{
 
-  .borda_instru {
-
-    margin-top: 9px !important;
+    margin-top: 9px !important; 
     margin-left: -1px !important;
     width: 100% !important;
     height: 95%;
@@ -154,125 +151,120 @@
     justify-content: center;
     align-items: center;
 
-  }
+}
 
 
 }
 
 @media (max-width: 991px) {
 
-  .img_carol {
+  .img_carol{
 
-    margin-top: 15px !important;
-    margin: auto !important;
-    height: 350px !important;
-    width: 100% !important;
+   margin-top: 15px !important;
+   margin: auto!important;
+   height: 350px !important;
+   width: 100% !important;
+   
 
+}
+.carousel-caption{
 
-  }
-
-  .carousel-caption {
-
-
-    background-color: rgba(0, 0, 0, 0.5) !important;
+  
+    background-color: rgba(0,0,0,0.5) !important;
     font-weight: none !important;
     font-size: smaller !important;
     width: auto !important;
     height: auto !important;
 
-    object-fit: cover !important;
-    object-position: center !important;
+    object-fit: cover !important; 
+    object-position: center !important; 
 
+   
+}
+h5{
 
-  }
+   font-size:medium !important;
 
-  h5 {
+}
 
-    font-size: medium !important;
-
-  }
-
-  .logo_header {
+.logo_header{
 
     height: 60px;
     margin-left: 2px;
 
-  }
+}
+.box{
 
-  .box {
+   width: 100% !important;
+   height: 100px !important;
+   margin: 50px 0px 0px !important;
 
-    width: 100% !important;
-    height: 100px !important;
-    margin: 50px 0px 0px !important;
+}
 
-  }
+.botao_hero {
+  background-color: var(--element);
+  border: none;
+  border-radius: 30px;
+  width: 100px !important;
+  height: 45px !important;
+  cursor: pointer;
 
-  .botao_hero {
-    background-color: var(--element);
-    border: none;
-    border-radius: 30px;
-    width: 100px !important;
-    height: 45px !important;
-    cursor: pointer;
+}
 
-  }
+.botao_hero a {
+  
+  color: #ffffff;
+  text-decoration: none;
+  
+  
+ 
+}
+.texto_hero{
 
-  .botao_hero a {
-
-    color: #ffffff;
-    text-decoration: none;
-
-
-
-  }
-
-  .texto_hero {
-
-    font-size: 15px !important;
+font-size: 15px !important;
 
 
-  }
+}
 
-  .onda {
+.onda{
 
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
+ 
+
+}
+
+.footer_img{
+
+  margin-left: 7% !important;
+
+}
+
+.footer-title{
 
 
-  }
+  margin-left: 25% !important;
 
-  .footer_img {
+}
 
-    margin-left: 7% !important;
-
-  }
-
-  .footer-title {
-
-
-    margin-left: 25% !important;
-
-  }
-
-  .footer-links {
+.footer-links{
 
     margin-left: 25% !important;
 
-  }
-
-  .footer-title2 {
-
-
-    margin-left: 33% !important;
-
-  }
-
-  .footer-social {
+}
+.footer-title2{
 
 
-    margin-left: 12% !important;
+      margin-left: 33% !important;
 
-  }
+}
+
+.footer-social{
+
+
+margin-left: 12% !important;
+
+}
 
 }
 

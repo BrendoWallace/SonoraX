@@ -1,0 +1,108 @@
+:root{
+ 
+    --bg: #242424 !important;
+    --bg-second: #9fb2e9 !important;
+    --element: #6d59ad !important;
+ 
+}
+*{
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+.video{
+
+    border-radius: 15px;
+    margin-top: 50px;
+    width: 300px;
+    border: 10px solid var(--element);
+}
+
+.talvez_ou_img{
+
+    width: 300px;
+    border: 10px solid var(--element);
+    border-radius: 15px;
+}
+
+.box_metronomo{
+    
+    background-color: var(--bg-second);
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 60px 20px;
+}
+
+.box_nInvertida,
+.box_Invertida{
+
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.box_Invertida{
+    flex-direction: row-reverse;
+}
+
+.box_metronomo img{
+
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 10px solid var(--element);
+    border-radius: 15px;
+
+}
+
+.lista{
+    color: white;
+}
+
+.lista li{
+    margin-bottom: 10px;
+}
+
+.texto{
+    color: #ffff;
+}
+
+.box_video{
+
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+@media (max-width: 768px){
+
+    .box_nInvertida,
+    .box_Invertida{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .box_metronomo img{
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .texto{
+        width: 100%;
+    }
+
+    .box_metronomo{
+
+        height: 4000px;
+    }
+
+}
