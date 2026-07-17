@@ -1,223 +1,209 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const carrossel = document.querySelector(".pacotes-carrossel");
-    const lista = document.querySelector(".pacotes-lista");
-    const cards = [...document.querySelectorAll(".pacote-card")];
+    iniciarCarrosselPacotes();
+    iniciarHistoriasSimples();
+});
 
-    if (!carrossel || !lista || cards.length === 0) {
+/* =========================================
+   FUNÇÕES AUXILIARES
+========================================= */
+
+function criarControlesAutomaticos({
+    carrossel,
+    classeControles,
+    classeBotao,
+    classeIndicadores,
+    textoAnterior,
+    textoProximo
+}) {
+    let controles = document.querySelector(`.${classeControles}`);
+
+    if (!controles) {
+        controles = document.createElement("div");
+        controles.className = classeControles;
+
+        carrossel.insertAdjacentElement("afterend", controles);
+    }
+
+    let botaoAnterior = controles.querySelector(
+        `.${classeBotao}.anterior`
+    );
+
+    let indicadores = controles.querySelector(
+        `.${classeIndicadores}`
+    );
+
+    let botaoProximo = controles.querySelector(
+        `.${classeBotao}.proximo`
+    );
+
+    if (!botaoAnterior) {
+        botaoAnterior = document.createElement("button");
+
+        botaoAnterior.type = "button";
+        botaoAnterior.className = `${classeBotao} anterior`;
+        botaoAnterior.innerHTML = "&#10094;";
+        botaoAnterior.setAttribute("aria-label", textoAnterior);
+
+        controles.appendChild(botaoAnterior);
+    }
+
+    if (!indicadores) {
+        indicadores = document.createElement("div");
+        indicadores.className = classeIndicadores;
+
+        controles.appendChild(indicadores);
+    }
+
+    if (!botaoProximo) {
+        botaoProximo = document.createElement("button");
+
+        botaoProximo.type = "button";
+        botaoProximo.className = `${classeBotao} proximo`;
+        botaoProximo.innerHTML = "&#10095;";
+        botaoProximo.setAttribute("aria-label", textoProximo);
+
+        controles.appendChild(botaoProximo);
+    }
+
+    return {
+        controles,
+        botaoAnterior,
+        botaoProximo,
+        indicadores
+    };
+}
+
+function lerVariavelNumerica(elemento, nome, valorPadrao) {
+    const estilos = window.getComputedStyle(elemento);
+
+    const valor = Number.parseFloat(
+        estilos.getPropertyValue(nome)
+    );
+
+    return Number.isFinite(valor) ? valor : valorPadrao;
+}
+
+function removerTransformacoesTemporarias(cards) {
+    cards.forEach(card => {
+        card.style.transform = "";
+        card.style.opacity = "";
+        card.style.filter = "";
+    });
+}
+
+/* =========================================
+   CARROSSEL DE PACOTES
+========================================= */
+
+function iniciarHistoriasSimples() {
+    const lista = document.querySelector(".historias-lista");
+
+    const cards = [
+        ...document.querySelectorAll(".historia-card")
+    ];
+
+    const botaoAnterior = document.querySelector(
+        ".botao-historias.anterior"
+    );
+
+    const botaoProximo = document.querySelector(
+        ".botao-historias.proximo"
+    );
+
+    const indicadores = [
+        ...document.querySelectorAll(
+            ".historias-indicadores .indicador"
+        )
+    ];
+
+    if (
+        !lista ||
+        cards.length === 0 ||
+        !botaoAnterior ||
+        !botaoProximo
+    ) {
         return;
     }
 
-    let indiceAtual = 1;
-    let arrastando = false;
-    let inicioX = 0;
-    let deslocamentoX = 0;
-    let bloqueado = false;
+    let indiceAtual = 0;
 
-    function normalizarIndice(indice) {
-        return (indice + cards.length) % cards.length;
+    function limitarIndice(indice) {
+        if (indice < 0) {
+            return cards.length - 1;
+        }
+
+        if (indice >= cards.length) {
+            return 0;
+        }
+
+        return indice;
     }
 
-    function atualizarCards() {
-        cards.forEach((card, indice) => {
-            card.classList.remove(
-                "anterior",
+    function atualizarIndicadores() {
+        indicadores.forEach((indicador, indice) => {
+            indicador.classList.toggle(
                 "ativo",
-                "proximo",
-                "oculto-esquerda",
-                "oculto-direita"
+                indice === indiceAtual
             );
-
-            const anterior = normalizarIndice(indiceAtual - 1);
-            const proximo = normalizarIndice(indiceAtual + 1);
-
-            if (indice === indiceAtual) {
-                card.classList.add("ativo");
-            } else if (indice === anterior) {
-                card.classList.add("anterior");
-            } else if (indice === proximo) {
-                card.classList.add("proximo");
-            } else {
-                const distancia =
-                    normalizarIndice(indice - indiceAtual);
-
-                if (distancia < cards.length / 2) {
-                    card.classList.add("oculto-direita");
-                } else {
-                    card.classList.add("oculto-esquerda");
-                }
-            }
         });
     }
 
-    function mudarPacote(direcao) {
-        if (bloqueado) {
-            return;
-        }
+    function mostrarCard(indice) {
+        indiceAtual = limitarIndice(indice);
 
-        bloqueado = true;
-
-        indiceAtual = normalizarIndice(
-            indiceAtual + direcao
-        );
-
-        atualizarCards();
-
-        window.setTimeout(() => {
-            bloqueado = false;
-        }, 500);
-    }
-
-    function iniciarArraste(event) {
-        if (bloqueado) {
-            return;
-        }
-
-        if (
-            event.target.closest(".botao-inscricao")
-        ) {
-            return;
-        }
-
-        arrastando = true;
-        inicioX = event.clientX;
-        deslocamentoX = 0;
-
-        carrossel.classList.add("arrastando");
-        carrossel.setPointerCapture(event.pointerId);
-    }
-
-    function moverArraste(event) {
-        if (!arrastando) {
-            return;
-        }
-
-        deslocamentoX = event.clientX - inicioX;
-
-        const limite = 130;
-        const movimento = Math.max(
-            -limite,
-            Math.min(limite, deslocamentoX)
-        );
-
-        const cardAtivo =
-            cards[indiceAtual];
-
-        const cardAnterior =
-            cards[normalizarIndice(indiceAtual - 1)];
-
-        const cardProximo =
-            cards[normalizarIndice(indiceAtual + 1)];
-
-        cardAtivo.style.transform = `
-            translate(
-                calc(-50% + ${movimento}px),
-                -50%
-            )
-            scale(${1.08 - Math.abs(movimento) / 900})
-        `;
-
-        cardAnterior.style.transform = `
-            translate(
-                calc(-50% - 360px + ${movimento}px),
-                -50%
-            )
-            scale(${0.78 + Math.max(movimento, 0) / 600})
-        `;
-
-        cardProximo.style.transform = `
-            translate(
-                calc(-50% + 360px + ${movimento}px),
-                -50%
-            )
-            scale(${0.78 + Math.max(-movimento, 0) / 600})
-        `;
-    }
-
-    function limparEstilosTemporarios() {
-        cards.forEach(card => {
-            card.style.transform = "";
+        cards[indiceAtual].scrollIntoView({
+            behavior: "smooth",
+            block: "nearest",
+            inline: "center"
         });
+
+        atualizarIndicadores();
     }
 
-    function finalizarArraste(event) {
-        if (!arrastando) {
-            return;
-        }
+    botaoAnterior.addEventListener("click", () => {
+        mostrarCard(indiceAtual - 1);
+    });
 
-        arrastando = false;
-        carrossel.classList.remove("arrastando");
+    botaoProximo.addEventListener("click", () => {
+        mostrarCard(indiceAtual + 1);
+    });
 
-        limparEstilosTemporarios();
-
-        if (
-            event.pointerId !== undefined &&
-            carrossel.hasPointerCapture(event.pointerId)
-        ) {
-            carrossel.releasePointerCapture(event.pointerId);
-        }
-
-        if (deslocamentoX < -70) {
-            mudarPacote(1);
-        } else if (deslocamentoX > 70) {
-            mudarPacote(-1);
-        } else {
-            atualizarCards();
-        }
-
-        deslocamentoX = 0;
-    }
-
-    cards.forEach((card, indice) => {
-        card.addEventListener("click", event => {
-            if (
-                event.target.closest(".botao-inscricao") ||
-                Math.abs(deslocamentoX) > 5
-            ) {
-                return;
-            }
-
-            const anterior =
-                normalizarIndice(indiceAtual - 1);
-
-            const proximo =
-                normalizarIndice(indiceAtual + 1);
-
-            if (indice === anterior) {
-                mudarPacote(-1);
-            } else if (indice === proximo) {
-                mudarPacote(1);
-            }
+    indicadores.forEach((indicador, indice) => {
+        indicador.addEventListener("click", () => {
+            mostrarCard(indice);
         });
     });
 
-    carrossel.addEventListener(
-        "pointerdown",
-        iniciarArraste
-    );
+    let temporizadorScroll;
 
-    carrossel.addEventListener(
-        "pointermove",
-        moverArraste
-    );
+    lista.addEventListener("scroll", () => {
+        window.clearTimeout(temporizadorScroll);
 
-    carrossel.addEventListener(
-        "pointerup",
-        finalizarArraste
-    );
+        temporizadorScroll = window.setTimeout(() => {
+            const centroLista =
+                lista.scrollLeft + lista.clientWidth / 2;
 
-    carrossel.addEventListener(
-        "pointercancel",
-        finalizarArraste
-    );
+            let menorDistancia = Infinity;
+            let novoIndice = 0;
 
-    carrossel.addEventListener(
-        "lostpointercapture",
-        event => {
-            if (arrastando) {
-                finalizarArraste(event);
-            }
-        }
-    );
+            cards.forEach((card, indice) => {
+                const centroCard =
+                    card.offsetLeft + card.offsetWidth / 2;
 
-    atualizarCards();
-});
+                const distancia = Math.abs(
+                    centroLista - centroCard
+                );
+
+                if (distancia < menorDistancia) {
+                    menorDistancia = distancia;
+                    novoIndice = indice;
+                }
+            });
+
+            indiceAtual = novoIndice;
+            atualizarIndicadores();
+        }, 80);
+    });
+
+    atualizarIndicadores();
+}

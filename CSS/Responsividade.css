@@ -567,416 +567,345 @@
 
 /* pacotes */
 
-@media screen and (max-width: 575.98px) {
-  .secao-pacotes {
-    min-height: 570px;
-    padding: 70px 0 40px;
-  }
+@media (max-width: 1200px) {
 
   .pacotes-carrossel {
-    height: 500px;
-  }
-
-  .pacotes-lista {
-    width: 100%;
-  }
-
-  .pacote-card {
-    width: 250px;
-    min-height: 370px;
-    padding: 34px 22px 24px;
-  }
-
-  .pacote-card.anterior {
-    transform: translate(calc(-50% - 235px), -50%) scale(0.7);
-  }
-
-  .pacote-card.ativo {
-    transform: translate(-50%, -50%) scale(1);
-  }
-
-  .pacote-card.proximo {
-    transform: translate(calc(-50% + 235px), -50%) scale(0.7);
-  }
-
-  .pacote-card.oculto-esquerda {
-    transform: translate(calc(-50% - 450px), -50%) scale(0.6);
-  }
-
-  .pacote-card.oculto-direita {
-    transform: translate(calc(-50% + 450px), -50%) scale(0.6);
-  }
-
-  .pacote-card h2 {
-    font-size: 1.3rem;
-  }
-
-  .pacote-preco {
-    margin-bottom: 18px;
-    font-size: 1rem;
-  }
-
-  .pacote-beneficios {
-    margin-bottom: 20px;
-    padding-left: 17px;
-  }
-
-  .pacote-beneficios li {
-    margin-bottom: 6px;
-    font-size: 0.74rem;
-    line-height: 1.25;
-  }
-
-  .botao-inscricao {
-    padding: 9px 20px;
-    font-size: 0.75rem;
-  }
-
-  .selo-popular {
-    top: -16px;
-    padding: 8px 14px;
-    font-size: 0.72rem;
-  }
-
-  .botao-carrossel {
-    width: 36px;
-    font-size: 2.2rem;
-  }
-
-  .botao-carrossel.anterior {
-    left: 2px;
-  }
-
-  .botao-carrossel.proximo {
-    right: 2px;
-  }
-
-  .secao-historias {
-    padding: 50px 0 65px;
-  }
-
-  .historias-cabecalho {
-    margin-bottom: 30px;
-    padding: 0 18px;
-  }
-
-  .historias-cabecalho h2 {
-    font-size: 1.25rem;
-  }
-
-  .historias-cabecalho a {
-    font-size: 0.82rem;
+    --pacote-anterior-x: -300px;
+    --pacote-proximo-x: 300px;
+    --pacote-oculto-esquerda-x: -560px;
+    --pacote-oculto-direita-x: 560px;
   }
 
   .historias-carrossel {
+    --historia-anterior-x: -290px;
+    --historia-proxima-x: 290px;
+    --historia-oculta-esquerda-x: -570px;
+    --historia-oculta-direita-x: 570px;
+
     width: 100%;
   }
 
-  .historias-lista {
-    justify-content: flex-start;
-    gap: 18px;
-    padding: 10px calc(50% - 130px);
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-  }
-
-  .historias-lista::-webkit-scrollbar {
-    display: none;
-  }
-
   .historia-card {
-    width: 260px;
-    min-height: 380px;
-    padding: 24px 20px 20px;
-    scroll-snap-align: center;
-  }
-
-  .historia-foto {
-    width: 88px;
-    height: 88px;
-    margin-bottom: 14px;
-  }
-
-  .historia-card h3 {
-    font-size: 1.05rem;
-  }
-
-  .historia-instrumento {
-    margin-bottom: 10px;
-    font-size: 0.78rem;
-  }
-
-  .historia-descricao {
-    font-size: 0.8rem;
-    line-height: 1.35;
-  }
-
-  .botao-ver-mais {
-    padding: 8px 18px;
-    font-size: 0.72rem;
-  }
-
-  .botao-historias {
-    display: none;
-  }
-
-  .historias-indicadores {
-    margin-top: 20px;
-  }
-
-  .indicador {
-    width: 11px;
-    height: 11px;
-  }
-
-  .caixa {
-    height: auto;
+    width: 270px;
   }
 }
 
-@media screen and (min-width: 576px) and (max-width: 767.98px) {
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 850px) {
+
   .secao-pacotes {
-    min-height: 620px;
-    padding: 85px 0 55px;
+    min-height: 610px;
+    padding: 90px 0 65px;
   }
 
   .pacotes-carrossel {
-    height: 530px;
+    --pacote-anterior-x: -420px;
+    --pacote-proximo-x: 420px;
+    --pacote-oculto-esquerda-x: -650px;
+    --pacote-oculto-direita-x: 650px;
+
+    height: 500px;
+    overflow: hidden;
   }
 
   .pacote-card {
     width: 280px;
-    min-height: 400px;
-    padding: 38px 25px 26px;
   }
 
-  .pacote-card.anterior {
-    transform: translate(calc(-50% - 290px), -50%) scale(0.74);
+  .pacote-card.anterior,
+  .pacote-card.proximo {
+    opacity: 0;
+    pointer-events: none;
   }
 
   .pacote-card.ativo {
-    transform: translate(-50%, -50%) scale(1.03);
-  }
+    --pacote-x: 0px;
+    --pacote-escala: 1;
 
-  .pacote-card.proximo {
-    transform: translate(calc(-50% + 290px), -50%) scale(0.74);
-  }
-
-  .pacote-card.oculto-esquerda {
-    transform: translate(calc(-50% - 530px), -50%) scale(0.62);
-  }
-
-  .pacote-card.oculto-direita {
-    transform: translate(calc(-50% + 530px), -50%) scale(0.62);
-  }
-
-  .pacote-card h2 {
-    font-size: 1.45rem;
-  }
-
-  .pacote-preco {
-    font-size: 1.08rem;
-  }
-
-  .pacote-beneficios li {
-    font-size: 0.82rem;
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .secao-historias {
     padding: 60px 0 75px;
   }
 
-  .historias-cabecalho h2 {
-    font-size: 1.5rem;
-  }
-
-  .historias-lista {
-    justify-content: flex-start;
-    gap: 22px;
-    padding: 10px calc(50% - 145px);
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-  }
-
-  .historias-lista::-webkit-scrollbar {
-    display: none;
-  }
-
-  .historia-card {
-    width: 290px;
-    min-height: 400px;
-    scroll-snap-align: center;
-  }
-
-  .botao-historias {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .secao-pacotes {
-    min-height: 690px;
-    padding: 105px 0 75px;
-  }
-
-  .pacotes-carrossel {
-    height: 570px;
-  }
-
-  .pacotes-lista {
-    width: min(900px, 100%);
-  }
-
-  .pacote-card {
-    width: 320px;
-    min-height: 430px;
-    padding: 42px 30px 30px;
-  }
-
-  .pacote-card.anterior {
-    transform: translate(calc(-50% - 350px), -50%) scale(0.77);
-  }
-
-  .pacote-card.ativo {
-    transform: translate(-50%, -50%) scale(1.06);
-  }
-
-  .pacote-card.proximo {
-    transform: translate(calc(-50% + 350px), -50%) scale(0.77);
-  }
-
-  .pacote-card.oculto-esquerda {
-    transform: translate(calc(-50% - 630px), -50%) scale(0.65);
-  }
-
-  .pacote-card.oculto-direita {
-    transform: translate(calc(-50% + 630px), -50%) scale(0.65);
-  }
-
-  .pacote-card h2 {
-    font-size: 1.7rem;
-  }
-
-  .pacote-preco {
-    font-size: 1.2rem;
-  }
-
-  .pacote-beneficios li {
-    font-size: 0.92rem;
-  }
-
-  .botao-inscricao {
-    padding: 11px 27px;
-    font-size: 0.92rem;
-  }
-
-  .secao-historias {
-    padding: 65px 0 80px;
+  .historias-cabecalho {
+    margin-bottom: 28px;
+    padding: 0 20px;
   }
 
   .historias-cabecalho h2 {
     font-size: 1.75rem;
   }
 
-  .historias-lista {
-    gap: 22px;
+  .historias-carrossel {
+    --historia-anterior-x: -450px;
+    --historia-proxima-x: 450px;
+    --historia-oculta-esquerda-x: -650px;
+    --historia-oculta-direita-x: 650px;
+
+    width: 100%;
+  }
+
+  .historias-viewport {
+    width: 100%;
+    height: 460px;
+    overflow: hidden;
   }
 
   .historia-card {
-    width: 220px;
-    min-height: 390px;
-    padding: 24px 18px 20px;
+    width: 290px;
+    height: 410px;
   }
 
-  .historia-foto {
-    width: 90px;
-    height: 90px;
+  .historia-card.anterior,
+  .historia-card.proximo {
+    opacity: 0;
+    pointer-events: none;
   }
 
-  .historia-card h3 {
-    font-size: 1.08rem;
-  }
+  .historia-card.ativo {
+    --historia-x: 0px;
+    --historia-escala: 1;
 
-  .historia-descricao {
-    font-size: 0.82rem;
-  }
-
-  .botao-historias {
-    font-size: 2.3rem;
+    left: 50%;
+    opacity: 1;
+    pointer-events: auto;
   }
 }
 
-@media screen and (min-width: 992px) {
+/* =====================================
+   CELULAR
+===================================== */
+
+@media (max-width: 620px) {
+
   .secao-pacotes {
-    min-height: 880px;
-    padding: 150px 0;
+    min-height: auto;
+    padding: 75px 0 55px;
   }
 
   .pacotes-carrossel {
-    height: 700px;
+    --pacote-anterior-x: -450px;
+    --pacote-proximo-x: 450px;
+    --pacote-oculto-esquerda-x: -650px;
+    --pacote-oculto-direita-x: 650px;
+
+    width: 100%;
+    height: 450px;
+    padding: 0 15px;
+
+    overflow: hidden;
   }
 
   .pacotes-lista {
-    width: min(1500px, 100%);
+    width: 100%;
   }
 
   .pacote-card {
-    width: 400px;
-    min-height: 530px;
-    padding: 52px 40px 36px;
+    width: 82vw;
+    max-width: 310px;
+    min-height: 390px;
+    padding: 35px 24px 25px;
   }
 
-  .pacote-card.anterior {
-    transform: translate(calc(-50% - 500px), -50%) scale(0.82);
+  .pacote-card.anterior,
+  .pacote-card.proximo,
+  .pacote-card.oculto-esquerda,
+  .pacote-card.oculto-direita {
+    opacity: 0;
+    pointer-events: none;
   }
 
   .pacote-card.ativo {
-    transform: translate(-50%, -50%) scale(1.1);
-  }
+    --pacote-x: 0px;
+    --pacote-escala: 1;
 
-  .pacote-card.proximo {
-    transform: translate(calc(-50% + 500px), -50%) scale(0.82);
-  }
-
-  .pacote-card.oculto-esquerda {
-    transform: translate(calc(-50% - 850px), -50%) scale(0.68);
-  }
-
-  .pacote-card.oculto-direita {
-    transform: translate(calc(-50% + 850px), -50%) scale(0.68);
-  }
-
-  .pacote-card h2 {
-    margin-bottom: 12px;
-    font-size: 2.2rem;
-  }
-
-  .pacote-preco {
-    margin-bottom: 30px;
-    font-size: 1.55rem;
-  }
-
-  .pacote-beneficios {
-    margin-bottom: 34px;
-    padding-left: 24px;
-  }
-
-  .pacote-beneficios li {
-    margin-bottom: 11px;
-    font-size: 1.08rem;
-    line-height: 1.45;
-  }
-
-  .botao-inscricao {
-    padding: 14px 34px;
-    font-size: 1.05rem;
+    left: 50%;
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .selo-popular {
-    top: -22px;
-    padding: 12px 24px;
-    font-size: 1rem;
+    top: -15px;
+    padding: 9px 15px;
+    font-size: 0.78rem;
+  }
+
+  .pacotes-controles {
+    min-height: 54px;
+    margin-top: 5px;
+    gap: 15px;
+  }
+
+  .secao-historias {
+    padding: 55px 0 70px;
+  }
+
+  .historias-cabecalho {
+    margin-bottom: 25px;
+    padding: 0 18px;
+  }
+
+  .historias-cabecalho h2 {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
+  .historias-cabecalho a {
+    font-size: 0.92rem;
+  }
+
+  .historias-carrossel {
+    --historia-anterior-x: -450px;
+    --historia-proxima-x: 450px;
+    --historia-oculta-esquerda-x: -650px;
+    --historia-oculta-direita-x: 650px;
+
+    width: 100%;
+    padding: 0 15px;
+
+    overflow: hidden;
+  }
+
+  .historias-viewport {
+    width: 100%;
+    height: 445px;
+    overflow: hidden;
+  }
+
+  .historia-card {
+    width: 84vw;
+    max-width: 315px;
+    height: 405px;
+    padding: 25px 20px 20px;
+  }
+
+  .historia-card.anterior,
+  .historia-card.proximo,
+  .historia-card.oculto-esquerda,
+  .historia-card.oculto-direita {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .historia-card.ativo {
+    --historia-x: 0px;
+    --historia-escala: 1;
+
+    top: 50%;
+    left: 50%;
+
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .historia-foto {
+    width: 95px;
+    height: 95px;
+    margin-bottom: 15px;
+  }
+
+  .historia-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .historia-instrumento {
+    margin-bottom: 12px;
+    font-size: 0.87rem;
+  }
+
+  .historia-descricao {
+    font-size: 0.87rem;
+    line-height: 1.35;
+  }
+
+  .historias-controles {
+    min-height: 54px;
+    margin-top: 5px;
+    gap: 15px;
+  }
+
+  .botao-pacote,
+  .botao-historias {
+    width: 36px;
+    height: 48px;
+
+    font-size: 2.4rem;
+  }
+
+  .indicador {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* =====================================
+   CELULARES PEQUENOS
+===================================== */
+
+@media (max-width: 380px) {
+
+  .secao-pacotes {
+    padding-top: 65px;
+  }
+
+  .pacotes-carrossel {
+    height: 455px;
+    padding: 0 10px;
+  }
+
+  .pacote-card {
+    width: 86vw;
+    max-width: 295px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .pacote-card h2 {
+    font-size: 1.35rem;
+  }
+
+  .pacote-beneficios li {
+    font-size: 0.82rem;
+  }
+
+  .historias-carrossel {
+    padding: 0 10px;
+  }
+
+  .historias-viewport {
+    height: 450px;
+  }
+
+  .historia-card {
+    width: 86vw;
+    max-width: 295px;
+    padding-right: 17px;
+    padding-left: 17px;
+  }
+
+  .historia-descricao {
+    font-size: 0.83rem;
+  }
+
+  .pacotes-controles,
+  .historias-controles {
+    gap: 11px;
+  }
+
+  .botao-pacote,
+  .botao-historias {
+    width: 32px;
+    font-size: 2.2rem;
+  }
+
+  .indicador {
+    width: 12px;
+    height: 12px;
   }
 }

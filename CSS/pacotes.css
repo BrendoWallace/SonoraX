@@ -1,16 +1,114 @@
+/* =========================================================
+   ELEMENTOS COMPARTILHADOS
+========================================================= */
+
+.botao-inscricao,
+.botao-ver-mais {
+    margin-top: auto;
+    padding: 10px 24px;
+    border-radius: 999px;
+    background-color: var(--element);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 220ms ease, filter 220ms ease;
+}
+
+.botao-inscricao:hover,
+.botao-ver-mais:hover {
+    color: #fff;
+    filter: brightness(1.12);
+    transform: translateY(-2px);
+}
+
+.pacotes-controles,
+.historias-controles {
+    min-height: 56px;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.pacotes-indicadores,
+.historias-indicadores {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.botao-pacote,
+.botao-historias {
+    width: 42px;
+    height: 50px;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 2.45rem;
+    font-weight: 800;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 220ms ease, transform 220ms ease;
+}
+
+.botao-pacote:hover,
+.botao-historias:hover {
+    color: #9a6cff;
+    transform: scale(1.08);
+}
+
+.indicador {
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    flex: 0 0 auto;
+    border: 0;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.82;
+    cursor: pointer;
+    transition: opacity 220ms ease, transform 220ms ease, background-color 220ms ease;
+}
+
+.indicador:hover {
+    opacity: 1;
+}
+
+.indicador.ativo {
+    background-color: var(--element);
+    opacity: 1;
+    transform: scale(1.16);
+}
+
+/* =========================================================
+   PACOTES
+========================================================= */
+
 .secao-pacotes {
     min-height: 650px;
-    padding: 120px 0;
+    padding: 120px 0 80px;
     background-color: var(--bg);
     overflow: hidden;
 }
 
 .pacotes-carrossel {
+    --pacote-anterior-x: -360px;
+    --pacote-proximo-x: 360px;
+    --pacote-oculto-esquerda-x: -680px;
+    --pacote-oculto-direita-x: 680px;
+
     position: relative;
-    height: 520px;
+    width: 100%;
+    height: 500px;
     display: grid;
     place-items: center;
-    overflow: visible;
     cursor: grab;
     touch-action: pan-y;
 }
@@ -21,12 +119,16 @@
 
 .pacotes-lista {
     position: relative;
-    width: min(1100px, 100%);
+    width: 100%;
+    max-width: 1100px;
     height: 100%;
     user-select: none;
 }
 
 .pacote-card {
+    --pacote-x: 0px;
+    --pacote-escala: 0.76;
+
     position: absolute;
     top: 50%;
     left: 50%;
@@ -36,48 +138,61 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #050505;
-    border: 2px solid #7b00ff;
+    border: 2px solid var(--borda-card);
     border-radius: 16px;
-    color: white;
-    cursor: pointer;
+    background-color: #050505;
+    color: #fff;
     opacity: 0;
     pointer-events: none;
-    transform: translate(-50%, -50%) scale(0.75);
-    transition: transform 650ms cubic-bezier(0.22, 1, 0.36, 1), opacity 450ms ease, filter 450ms ease, box-shadow 450ms ease;
+    transform:
+        translate(-50%, -50%) translateX(var(--pacote-x)) scale(var(--pacote-escala));
+    transition:
+        transform 620ms cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 420ms ease,
+        filter 420ms ease,
+        box-shadow 420ms ease;
     will-change: transform, opacity;
+    backface-visibility: hidden;
 }
 
 .pacote-card.anterior,
 .pacote-card.proximo {
-    z-index: 1;
-    opacity: 0.35;
-    filter: brightness(0.6);
+    z-index: 2;
+    opacity: 0.34;
+    filter: brightness(0.62);
     pointer-events: auto;
+    cursor: pointer;
 }
 
 .pacote-card.anterior {
-    transform: translate(calc(-50% - 360px), -50%) scale(0.78);
+    --pacote-x: var(--pacote-anterior-x);
+    --pacote-escala: 0.8;
 }
 
 .pacote-card.ativo {
-    z-index: 3;
+    --pacote-x: 0px;
+    --pacote-escala: 1.08;
+
+    z-index: 4;
     opacity: 1;
+    filter: none;
     pointer-events: auto;
-    transform: translate(-50%, -50%) scale(1.08);
-    box-shadow: 0 20px 55px rgba(123, 0, 255, 0.28);
+    box-shadow: 0 22px 56px rgba(123, 0, 255, 0.26);
 }
 
 .pacote-card.proximo {
-    transform: translate(calc(-50% + 360px), -50%) scale(0.78);
+    --pacote-x: var(--pacote-proximo-x);
+    --pacote-escala: 0.8;
 }
 
 .pacote-card.oculto-esquerda {
-    transform: translate(calc(-50% - 650px), -50%) scale(0.68);
+    --pacote-x: var(--pacote-oculto-esquerda-x);
+    --pacote-escala: 0.68;
 }
 
 .pacote-card.oculto-direita {
-    transform: translate(calc(-50% + 650px), -50%) scale(0.68);
+    --pacote-x: var(--pacote-oculto-direita-x);
+    --pacote-escala: 0.68;
 }
 
 .pacotes-carrossel.arrastando .pacote-card {
@@ -85,14 +200,15 @@
 }
 
 .pacote-card h2 {
-    margin-bottom: 7px;
+    margin: 0 0 7px;
+    color: #fff;
     font-size: 1.55rem;
     font-weight: 800;
     text-align: center;
 }
 
 .pacote-preco {
-    margin-bottom: 22px;
+    margin: 0 0 22px;
     font-size: 1.15rem;
     font-weight: 700;
     text-align: center;
@@ -100,152 +216,150 @@
 
 .pacote-beneficios {
     width: 100%;
-    margin-bottom: 26px;
+    margin: 0 0 26px;
     padding-left: 20px;
 }
 
 .pacote-beneficios li {
     margin-bottom: 8px;
     font-size: 0.87rem;
-    line-height: 1.3;
-}
-
-.botao-inscricao,
-.botao-ver-mais {
-    margin-top: auto;
-    background-color: var(--element);
-    border-radius: 20px;
-    color: white;
-    font-weight: 700;
-    text-decoration: none;
-    transition: transform 250ms ease;
-}
-
-.botao-inscricao {
-    padding: 10px 24px;
-    font-size: 0.85rem;
-}
-
-.botao-ver-mais {
-    padding: 9px 22px;
-    font-size: 0.82rem;
-}
-
-.botao-inscricao:hover,
-.botao-ver-mais:hover {
-    transform: translateY(-2px);
+    line-height: 1.35;
 }
 
 .selo-popular {
     position: absolute;
     top: -18px;
     left: 50%;
-    z-index: 5;
+    z-index: 6;
     padding: 10px 18px;
-    background-color: #7200cf;
     border-radius: 14px;
-    color: white;
+    background-color: #7200cf;
+    color: #fff;
     font-size: 0.85rem;
     font-weight: 700;
     white-space: nowrap;
     transform: translateX(-50%);
 }
 
-.botao-carrossel,
-.botao-historias {
-    position: absolute;
-    top: 50%;
-    z-index: 5;
-    border: 0;
-    background: transparent;
-    color: white;
-    font-weight: 700;
-    cursor: pointer;
-    transform: translateY(-50%);
+/* =========================================================
+   ONDAS
+========================================================= */
+
+.baixo {
+    background-color: var(--bg-second);
+    overflow: hidden;
 }
 
-.botao-carrossel {
-    width: 50px;
-    height: 70px;
-    font-size: 3rem;
-    transition: color 300ms ease, transform 300ms ease;
+.onda {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
-.botao-carrossel:hover {
-    color: #9a6cff;
-    transform: translateY(-50%) scale(1.08);
+.caixa {
+    height: 500px;
 }
 
-.botao-carrossel.anterior {
-    left: 10px;
-}
+/* =========================================================
+   HISTÓRIAS
+========================================================= */
 
-.botao-carrossel.proximo {
-    right: 10px;
+.secao-historias,
+.secao-historias * {
+    box-sizing: border-box;
 }
 
 .secao-historias {
-    position: relative;
-    z-index: 3;
-    padding: 70px 0 90px;
+    width: 100%;
+    padding: 70px 20px 90px;
     background-color: var(--bg);
+    overflow: hidden;
 }
 
 .historias-cabecalho {
-    margin-bottom: 45px;
+    width: 100%;
+    margin-bottom: 40px;
     text-align: center;
 }
 
 .historias-cabecalho h2 {
-    margin-bottom: 12px;
-    color: white;
+    margin: 0 0 12px;
+    color: #ffffff;
     font-size: 2rem;
     font-weight: 800;
 }
 
 .historias-cabecalho a {
-    color: white;
+    color: #ffffff;
     font-size: 1rem;
     font-weight: 700;
     text-decoration: underline;
 }
 
 .historias-carrossel {
-    position: relative;
-    width: min(1280px, 96%);
+    width: 100%;
+    max-width: 1400px;
     margin: 0 auto;
-    display: grid;
-    place-items: center;
+    overflow: hidden;
 }
 
 .historias-lista {
     width: 100%;
     display: flex;
     align-items: stretch;
-    justify-content: center;
-    gap: 30px;
-    overflow: visible;
+    gap: 28px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+}
+
+.historias-lista::-webkit-scrollbar {
+    display: none;
 }
 
 .historia-card {
     width: 310px;
-    min-height: 410px;
+    min-width: 310px;
+    min-height: 420px;
     padding: 28px 24px 22px;
+
     display: flex;
-    flex: 0 0 auto;
     flex-direction: column;
     align-items: center;
+
+    flex-shrink: 0;
+    scroll-snap-align: center;
+
     background-color: #050505;
     border: 2px solid #7b00ff;
     border-radius: 16px;
-    color: white;
+
+    color: #ffffff;
     text-align: center;
-    transition: transform 300ms ease, box-shadow 300ms ease;
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+
+    filter: none;
+    transform: none;
+
+    transition:
+        transform 300ms ease,
+        box-shadow 300ms ease;
 }
 
 .historia-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 28px rgba(123, 0, 255, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 14px 32px rgba(123, 0, 255, 0.25);
 }
 
 .historia-foto {
@@ -257,61 +371,234 @@
 }
 
 .historia-card h3 {
-    margin-bottom: 4px;
+    margin: 0 0 4px;
+    color: #ffffff;
     font-size: 1.25rem;
     font-weight: 800;
 }
 
 .historia-instrumento {
-    margin-bottom: 14px;
+    margin: 0 0 14px;
     font-size: 0.9rem;
     font-weight: 600;
 }
 
 .historia-descricao {
-    margin-bottom: 20px;
+    margin: 0 0 20px;
     font-size: 0.93rem;
     line-height: 1.4;
 }
 
-.botao-historias {
-    width: 45px;
-    height: 60px;
-    font-size: 2.8rem;
+.botao-ver-mais {
+    margin-top: auto;
 }
 
-.botao-historias.anterior {
-    left: 0;
-}
+.historias-controles {
+    width: 100%;
+    min-height: 56px;
+    margin-top: 24px;
 
-.botao-historias.proximo {
-    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
 }
 
 .historias-indicadores {
-    margin-top: 28px;
     display: flex;
+    align-items: center;
     justify-content: center;
     gap: 10px;
 }
 
-.indicador {
+.botao-historias {
+    width: 42px;
+    height: 50px;
+    padding: 0;
+
+    display: grid;
+    place-items: center;
+
+    border: 0;
+    background-color: transparent;
+
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        color 220ms ease,
+        transform 220ms ease;
+}
+
+.botao-historias:hover {
+    color: #9a6cff;
+    transform: scale(1.08);
+}
+
+.historias-indicadores .indicador {
     width: 14px;
     height: 14px;
     padding: 0;
+
     border: 0;
     border-radius: 50%;
-    background-color: white;
+
+    background-color: #ffffff;
+    opacity: 0.82;
+
     cursor: pointer;
-    opacity: 0.85;
-    transition: background-color 300ms ease, transform 300ms ease;
+
+    transition:
+        opacity 220ms ease,
+        transform 220ms ease,
+        background-color 220ms ease;
 }
 
-.indicador.ativo {
+.historias-indicadores .indicador.ativo {
     background-color: var(--element);
-    transform: scale(1.15);
+    opacity: 1;
+    transform: scale(1.16);
 }
 
-.caixa {
-    height: 500px;
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 620px) {
+    .secao-pacotes {
+        padding: 72px 0 52px;
+    }
+
+    .pacotes-carrossel {
+        height: 455px;
+        padding: 0 14px;
+    }
+
+    .pacote-card {
+        width: 84vw;
+        max-width: 310px;
+        min-height: 390px;
+        padding: 35px 23px 24px;
+    }
+
+    .selo-popular {
+        top: -15px;
+        padding: 9px 15px;
+        font-size: 0.78rem;
+    }
+
+    .caixa {
+        height: 310px;
+    }
+
+    .secao-historias {
+        padding: 55px 0 70px;
+    }
+
+    .historias-cabecalho {
+        margin-bottom: 28px;
+        padding: 0 18px;
+    }
+
+    .historias-cabecalho h2 {
+        font-size: 1.5rem;
+        line-height: 1.25;
+    }
+
+    .historias-cabecalho a {
+        font-size: 0.92rem;
+    }
+
+    .historias-carrossel {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .historias-lista {
+        width: 100%;
+        gap: 18px;
+        padding: 0 18px;
+
+        justify-content: flex-start;
+
+        scroll-padding-left: 18px;
+        scroll-padding-right: 18px;
+    }
+
+    .historia-card {
+        width: 86vw;
+        min-width: 86vw;
+        max-width: 315px;
+        min-height: 405px;
+
+        margin: 0;
+        padding: 25px 20px 20px;
+
+        position: relative;
+        top: auto;
+        left: auto;
+
+        opacity: 1;
+        visibility: visible;
+
+        filter: none;
+        transform: none;
+    }
+
+    .historia-card:hover {
+        transform: none;
+    }
+
+    .historia-foto {
+        width: 95px;
+        height: 95px;
+        margin-bottom: 15px;
+    }
+
+    .historia-card h3 {
+        font-size: 1.15rem;
+    }
+
+    .historia-instrumento {
+        margin-bottom: 12px;
+        font-size: 0.87rem;
+    }
+
+    .historia-descricao {
+        font-size: 0.86rem;
+        line-height: 1.35;
+    }
+
+    .historias-controles {
+        margin-top: 18px;
+        gap: 13px;
+    }
+
+    .botao-historias {
+        width: 36px;
+        height: 46px;
+        font-size: 2.25rem;
+    }
+
+    .historias-indicadores .indicador {
+        width: 13px;
+        height: 13px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .pacote-card,
+    .historia-card,
+    .indicador,
+    .botao-pacote,
+    .botao-historias {
+        transition-duration: 1ms;
+    }
 }
