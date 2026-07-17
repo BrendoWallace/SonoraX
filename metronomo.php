@@ -23,27 +23,31 @@
 
     <?php include 'include/nav.php'; ?>
 
-    <div class="video">
-        <video class="oi" autoplay muted loop>
+    <div class="box_video">
+        <video class="video" autoplay muted loop>
 
             <source src="./IMG/metrônomo.mp4" type="video/mp4">
 
         </video>
     </div>
 
+    <div id="metronomo-container"></div>
+
     <script src='./JS/metronomo.js' type='text/javascript'></script>
     <script>
-        const metronome = new KDMetronome() // sem passar toggleID
-        metronome.ready(_ => metronome.show()) // força aparecer sem clique
+        const metronome = new KDMetronome({
+            parentID: 'metronomo-container'
+        })
+        metronome.ready(_ => metronome.show())
     </script>
 
     <img class="onda" src="./IMG/ondas.png" alt="">
 
-    <div class="aaaa">
+    <div class="box_metronomo">
 
-        <div class="coisa">
+        <div class="box_nInvertida">
 
-            <video class="oi2" autoplay muted loop>
+            <video class="talvez_ou_img" autoplay muted loop>
 
                 <source src="./IMG/metrônomo.mp4" type="video/mp4">
 
@@ -51,7 +55,7 @@
 
             <div class="texto">
                 <h2>O que é um metrônomo</h2>
-                <p class="l">O metrônomo é um aparelho que ajuda os músicos a manter o tempo
+                <p class="info_metronomo">O metrônomo é um aparelho que ajuda os músicos a manter o tempo
                     correto através de batimentos constantes medidos em BPM(batidas por minuto)
                     . Por exemplo, 60 BPM corresponde a um batimento por segundo, enquanto 120 BPM
                     equivale a dois batimentos por segundo.
@@ -61,14 +65,14 @@
 
         </div>
 
-        <div class="coisa2">
+        <div class="box_Invertida">
 
             <img src="./IMG/metronomo_3.png" alt="">
 
             <div class="texto">
                 <h2>Como usar o metrônomo</h2>
-                <p class="l">Para usar o metrônomo, ajusta o andamento com o comtrole deslizante,
-                    as setas do teclado ou o botão "Marcar tempo", que tambpem pode ser usado pela tecla
+                <p class="info_metronomo">Para usar o metrônomo, ajusta o andamento com o controle deslizante,
+                    as setas do teclado ou o botão "Marcar tempo", que também pode ser usado pela tecla
                     "t". Depois, escolhe o número de tempos por compasso, como 4/4, 3/4 ou 2/4. Se não
                     souberes qual usar, podes selecionar a oção 1 para manter apenas a marcação básica do ritmo.
                 </p>
@@ -76,7 +80,7 @@
 
         </div>
 
-        <div class="coisa">
+        <div class="box_nInvertida">
 
             <img src="./IMG/metronomo_2.webp" alt="">
 
@@ -96,45 +100,34 @@
 
         </div>
 
-        <div class="coisa2">
+        <div class="box_Invertida">
 
-            <img src="./IMG/Keyboard_cat.jpg" alt="">
+            <img src="./IMG/Passo1_metronomo.png" alt="">
 
             <div class="texto">
                 <h2>1° Passo</h2>
-                <p class="l">O 1° passo é iniciar ele clicando no botão START/STOP igual a imagem ao lado,
+                <p class="info_metronomo">O 1° passo é iniciar ele clicando no botão ON/OFF igual a imagem ao lado,
                     o mesmo caso queira desliga-lo
                 </p>
             </div>
 
         </div>
 
-        <div class="coisa">
+        <div class="box_nInvertida">
 
-            <img src="./IMG/Keyboard_cat.jpg" alt="">
+            <img src="./IMG/passo2_metronomo.png" alt="">
 
             <div class="texto">
                 <h2>2° Passo</h2>
-                <p class="l">Conforme explicado em "Como usar o metrônomo", ao lado do BPM temos dois sinas,
-                    "+" e "-" onde você pode ajustar o nível do BPM desejado, lembre-se das regras explicadas
-                    anteriormente, para melhor aproveito do metrônomo
+                <p class="info_metronomo">Conforme explicado em "Como usar o metrônomo", ao lado do BPM temos dois sinas,
+                    "bpm" e "vol" onde você pode ajustar o nível do BPM desejado, lembre-se das regras explicadas
+                    anteriormente, para melhor aproveito do metrônomo. E o volume para ajustar.
                 </p>
             </div>
 
         </div>
 
     </div>
-
-
-
-
-
-
-
-
-
-
-
 
     <img class="onda" src="./IMG/ondas_virada.png" alt="">
 
