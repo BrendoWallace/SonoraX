@@ -33,7 +33,7 @@
     </header>
 
 
-    <div class="oi">
+    <div class="FAQ">
 
         <h2 class="titulo">&mdash;&mdash; Dúvidas &mdash;&mdash;</h2>
 

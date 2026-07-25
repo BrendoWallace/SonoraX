@@ -1,0 +1,70 @@
+*{
+
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+:root{
+
+    --bg: #242424 !important;
+    --bg-second: #9fb2e9 !important;
+    --element: #6d59ad !important;
+
+}
+.blog{
+
+    height: 2000px;
+    background-color: var(--bg-second);
+
+}
+.pesquisa{
+
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+}
+.bt2{
+
+    height: 40px;
+    width: 100px;
+    background-color: var(--element);
+    border-radius: 30px;
+    padding: 5px;
+}
+.botao{
+
+    height: 40px;
+    width: 500px;
+    background-color: var(--element);
+    border-radius: 30px;
+
+}
+
+.produto{
+
+    color: white;
+}
+
+.duvida1{
+
+    margin-top: 50px;
+    width: 500px;
+    border: 5px solid var(--element);
+}
+
+.ooi{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+@media (max-width: 530px) {
+
+    .duvida1 {
+        width: 300px;
+    }
+}
+
