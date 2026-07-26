@@ -31,13 +31,13 @@
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="10000">
                     <a href="./blog2.php?produto=cara_banner">
-                        <img src="./IMG/cara_banner.avif" class="img_carol img-fluid  d-block" alt="...">
+                        <img src="./IMG/cara_banner.png" class="img_carol img-fluid  d-block" alt="...">
                     </a>
                 </div>
 
                 <div class="carousel-item">
                     <a href="./blog2.php?produto=caraTocandoViolao">
-                        <img src="./IMG/caraTocandoViolao_banner.jpg" class="img_carol img-fluid  d-block" alt="...">
+                        <img src="./IMG/caraTocandoViolao_banner.png" class="img_carol img-fluid  d-block" alt="...">
                     </a>
                 </div>
                 <div class="carousel-item">
@@ -66,17 +66,84 @@
 
             <button class="bt2">Melhores</button>
 
-            <button class="botao">oi</button>
+            <button class="botao">
+                <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+            </button>
 
         </div>
 
+        <div class="blogs">
 
+            <h2 class="p-3">10 práticas úteis na hora de aprender a tocar um instrumento</h2>
+            <p>autor: Carlos</p>
+            <a href="./blog2.php?produto=caraTocandoViolao">
+                <img src="./IMG/caraTocandoViolao_banner.png" alt="">
+            </a>
 
+        </div>
+
+        <div class="blogs">
+
+            <h2 class="p-3">Quando a música une talentos</h2>
+            <p>autor: Pedro</p>
+            <a href="./blog2.php?produto=menina_violino">
+                <img src="./IMG/meninaTocandoViolino_blog.png" alt="">
+            </a>
+
+        </div>
+
+        <div class="blogs">
+
+            <h2 class="p-3">Aprendendo juntos: o poder da música em grupo</h2>
+            <p>autor: Maria</p>
+            <a href="./blog2.php?produto=criancas">
+                <img src="./IMG/criancas.png" alt="">
+            </a>
+
+        </div>
 
     </div>
 
 
     <img class="onda" src="./IMG/ondas_virada.png" alt="onda invertida" aria-hidden="true">
+
+    <hr>
+    <div class="blog_extras">
+
+        <a href="./blog2.php?produto=kitty">
+            <img src="./IMG/kitty.png" alt="">
+        </a>
+        <div class="texto">
+            <h2>O ritmo que move a música é hello kitty</h2>
+            <p>autor: jão</p>
+        </div>
+
+    </div>
+    <hr>
+    <div class="blog_extras">
+
+        <a href="./blog2.php?produto=grupo">
+            <img src="./IMG/grupo.png" alt="">
+        </a>
+        <div class="texto">
+            <h2>A música como parte da cultura e da história</h2>
+            <p>autor: Ana</p>
+        </div>
+
+    </div>
+    <hr>
+    <div class="blog_extras">
+
+        <a href="./blog2.php?produto=caraTocandoViolao">
+            <img src="./IMG/caraTocandoViolao_banner.jpg" alt="">
+        </a>
+        <div class="texto">
+            <h2>10 práticas úteis na hora de aprender a tocar um instrumento</h2>
+            <p>autor: Carlos</p>
+        </div>
+
+    </div>
+    <hr>
 
     <?php include 'include/footer.php'; ?>
 

@@ -10,16 +10,16 @@ const preco = document.getElementById("preco-produto");
 
 if(produto == "cara_banner"){
 
-    imagem.src = "./IMG/cara_banner.avif";
+    imagem.src = "./IMG/cara_banner.png";
 
-    nome.innerHTML = "Rapunzel";
+    nome.innerHTML = "O primeiro grande passo na música";
 
-    preco.innerHTML = "R$ 70,00";
+    preco.innerHTML = "Apesar do tamanho da tuba impressionar, ela representa um grande desafio e uma enorme conquista para quem está começando. Cada ensaio fortalece a disciplina, a respiração e a confiança do aluno, mostrando que dedicação é mais importante do que idade.";
 }
 
 else if(produto == "caraTocandoViolao"){
 
-    imagem.src = "./IMG/caraTocandoViolao_banner.jpg";
+    imagem.src = "./IMG/caraTocandoViolao_banner.png";
 
     nome.innerHTML = "10 práticas úteis na hora de aprender a tocar um instrumento";
 
@@ -39,6 +39,49 @@ else if(produto == "caraTocandoViolao"){
         </ul>
     `;
 }
+
+else if(produto == "menina_violino"){
+
+    imagem.src = "./IMG/meninaTocandoViolino_blog.png";
+
+    nome.innerHTML = "Quando a música une talentos";
+
+    preco.innerHTML = "Estudar violino em grupo ajuda os alunos a desenvolver concentração, trabalho em equipe e respeito pelo tempo dos colegas. Além do aprendizado técnico, as aulas coletivas tornam a experiência mais divertida e motivadora para todos.";
+}
+else if(produto == "meninas_banner"){
+
+    imagem.src = "./IMG/meninas_banner.png";
+
+    nome.innerHTML = "Aprendendo juntos: o poder da música em grupo";
+
+    preco.innerHTML = "Aprender um instrumento ao lado de outros estudantes torna a evolução mais leve e inspiradora. Cada ensaio representa uma oportunidade de aprender algo novo, compartilhar experiências e criar amizades por meio da música.";
+}
+else if(produto == "criancas"){
+
+    imagem.src = "./IMG/criancas.png";
+
+    nome.innerHTML = "Cada instrumento, uma nova descoberta";
+
+    preco.innerHTML = "Cada instrumento possui um som, uma técnica e um desafio diferente. Experimentar diversas opções ajuda crianças e iniciantes a descobrirem qual combina mais com sua personalidade e com o estilo musical que desejam aprender.";
+}
+else if(produto == "kitty"){
+
+    imagem.src = "./IMG/kitty.png";
+
+    nome.innerHTML = "O ritmo que move a música é hello kitty";
+
+    preco.innerHTML = "A bateria é responsável por marcar o tempo e dar energia às músicas. Além de divertida, sua prática desenvolve coordenação motora, independência entre braços e pernas e melhora a percepção rítmica, habilidades importantes para qualquer músico.";
+}
+else if(produto == "grupo"){
+
+    imagem.src = "./IMG/grupo.png";
+
+    nome.innerHTML = "A música como parte da cultura e da história";
+
+    preco.innerHTML = "Muito antes dos instrumentos modernos, diferentes povos já utilizavam tambores, flautas e cantos para celebrar tradições, contar histórias e fortalecer a união da comunidade. Conhecer essas manifestações é também conhecer a riqueza cultural da música.";
+}
+
+
 
 
 

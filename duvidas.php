@@ -42,11 +42,13 @@
             <details class="faq-item" open>
 
                 <summary class="faq-pergunta">
-                    Perguntas
+                    Quais instrumentos posso aprender?
                 </summary>
 
                 <div class="faq-resposta">
-                    <p>Aqui ficará a resposta da primeira pergunta.</p>
+                    <p>O site oferece aulas de diversos instrumentos, como violão, guitarra, piano, 
+                    teclado, bateria, violino, flauta, canto e muitos outros, dependendo dos professores 
+                    cadastrados.</p>
                 </div>
 
             </details>
@@ -55,12 +57,13 @@
             <details class="faq-item">
 
                 <summary class="faq-pergunta">
-                    O site é bom?
+                    Posso cancelar ou remarcar uma aula?
                 </summary>
 
                 <div class="faq-resposta">
                     <p>
-                        Sim! É os guri
+                        Sim. O aluno pode cancelar ou solicitar a remarcação da aula dentro do prazo 
+                        estabelecido pelo professor.
                     </p>
                 </div>
 
@@ -70,11 +73,63 @@
             <details class="faq-item">
 
                 <summary class="faq-pergunta">
-                    Perguntas
+                    Preciso ter experiência para começar?
                 </summary>
 
                 <div class="faq-resposta">
-                    <p>Aqui ficará a resposta da terceira pergunta.</p>
+                    <p>Não. Existem professores para todos os níveis, desde iniciantes até alunos avançados. 
+                        Basta escolher um professor compatível com seu nível de conhecimento.</p>
+                </div>
+
+            </details>
+
+            <details class="faq-item">
+
+                <summary class="faq-pergunta">
+                    Como os professores cadastram suas aulas?
+                </summary>
+
+                <div class="faq-resposta">
+                    <p>Os professores possuem uma área exclusiva onde podem cadastrar aulas, definir horários
+                         disponíveis, atualizar seu perfil e acompanhar os alunos inscritos.</p>
+                </div>
+
+            </details>
+
+            <details class="faq-item">
+
+                <summary class="faq-pergunta">
+                    Preciso ter experiência para começar?
+                </summary>
+
+                <div class="faq-resposta">
+                    <p>Não. Existem professores para todos os níveis, desde iniciantes até alunos avançados. 
+                        Basta escolher um professor compatível com seu nível de conhecimento.</p>
+                </div>
+
+            </details>
+
+             <details class="faq-item">
+
+                <summary class="faq-pergunta">
+                    Posso assistir às aulas pelo celular?
+                </summary>
+
+                <div class="faq-resposta">
+                    <p>Sim. O site é compatível com computadores, tablets e smartphones.</p>
+                </div>
+
+            </details>
+
+             <details class="faq-item">
+
+                <summary class="faq-pergunta">
+                    Posso ter aulas com mais de um professor?
+                </summary>
+
+                <div class="faq-resposta">
+                    <p>Sim. Você pode agendar aulas com diferentes professores conforme seu interesse e o 
+                        instrumento que deseja aprender.</p>
                 </div>
 
             </details>

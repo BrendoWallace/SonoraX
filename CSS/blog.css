@@ -13,7 +13,7 @@
 }
 .blog{
 
-    height: 2000px;
+    height: 2400px;
     background-color: var(--bg-second);
 
 }
@@ -31,6 +31,7 @@
     background-color: var(--element);
     border-radius: 30px;
     padding: 5px;
+    color: white;
 }
 .botao{
 
@@ -40,19 +41,16 @@
     border-radius: 30px;
 
 }
-
 .produto{
 
     color: white;
 }
-
 .duvida1{
 
     margin-top: 50px;
     width: 500px;
     border: 5px solid var(--element);
 }
-
 .ooi{
    
     display: flex;
@@ -61,10 +59,260 @@
 
 }
 
+.blogs img{
+ 
+    width: 800px;
+    border: 15px solid var(--element);
+
+}
+.blogs{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    color: white;
+}
+
+.blog_extras img{
+    width: 400px;
+}
+.blog_extras{
+
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 70px;
+    color: white;
+    margin-bottom: 40px;
+    
+}
+
+.texto{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+
+hr{
+    width: 85%;
+    border: none;
+    height: 5px;
+    background-color: white;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    margin-top: 15px;
+}
+.aa{
+    max-width: 900px;
+    text-align: center;
+}
+.pessoa{
+
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-second);
+    gap: 15px;
+
+}
+.pessoa img, .pessoa_blog img{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    object-fit:cover;
+    flex-shrink:0;
+    margin-left: 5px;
+}
+.gg{
+    border: 5px solid var(--element);
+    background-color: var(--element);
+    height: 90px;
+    border-radius: 30px;
+    width: 600px;
+    color: white;
+    display: flex;
+    justify-content: start;
+    padding: 10px;
+    cursor: pointer;
+}
+.pessoa_blog{
+
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    color: white;
+    align-items: center;
+    cursor: pointer;
+}
 @media (max-width: 530px) {
 
     .duvida1 {
         width: 300px;
     }
+    .blogs img{
+        width: 290px;
+    }
+    .blog_extras img{
+        width: 290px;
+    }
+    .blog_extras{
+        flex-direction: column;
+        align-items: center;
+    }
+    .texto{
+        padding: 15px;
+    }
+    .blog{
+        height: 1400px;
+    }
+    .pessoa img, .pessoa_blog img{
+       width:60px;
+       height:60px;
+    }
 }
 
+
+
+
+
+
+
+
+
+
+.comentarios{
+    width: 100%;
+    background: var(--bg-second);
+    padding: 40px 0;
+}
+
+.comentarios h2{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.comentarios-conteudo{
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.comentario{
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+.box_comentario{
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+}
+
+.box_comentario img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    object-fit:cover;
+    flex-shrink:0;
+}
+
+.conteudo{
+    flex:1;
+}
+
+.conteudo h4{
+    margin:0;
+}
+
+.conteudo span{
+    color:#777;
+    font-size:14px;
+}
+
+.conteudo p{
+    margin:8px 0;
+}
+
+.acoes{
+    display:flex;
+    gap:20px;
+    color:#888;
+    flex-wrap:wrap;
+}
+.acoes i{
+    gap:15px;
+    cursor: pointer;
+}
+
+.respostas{
+    position:relative;
+    margin-left:25px;
+    padding-left:35px;
+    margin-top:15px;
+}
+
+.respostas::before{
+    content:"";
+    position:absolute;
+
+    left:0;
+    top:-8px;
+
+    width:18px;
+    height:55px;
+
+    border-left:2px solid #888;
+    border-bottom:2px solid #888;
+    border-bottom-left-radius:10px;
+}
+
+@media (max-width:768px){
+
+    .comentarios{
+        padding:20px 15px;
+    }
+
+    .box_comentario{
+        gap:10px;
+    }
+
+    .box_comentario img{
+        width:40px;
+        height:40px;
+    }
+
+    .conteudo h4{
+        font-size:15px;
+    }
+
+    .conteudo p{
+        font-size:14px;
+    }
+
+    .acoes{
+        gap:10px;
+        font-size:13px;
+    }
+
+    .respostas{
+        margin-left:15px;
+        padding-left:22px;
+    }
+
+    .respostas::before{
+        width:12px;
+        height:45px;
+    }
+
+}
+
+
+.fa-magnifying-glass{
+    color: white;
+    display: flex;
+    justify-content: start;
+    margin-left: 15px
+}
