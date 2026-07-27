@@ -1,0 +1,945 @@
+.pagina-autenticacao {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 65px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.pagina-autenticacao::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 34%;
+    background-image:
+        linear-gradient(rgba(36, 36, 36, 0.15),
+            rgba(36, 36, 36, 0.35)),
+        url("../IMG/piano\ car\ gamer.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+
+.pagina-autenticacao::after {
+    content: "";
+    position: absolute;
+    top: 34%;
+    left: 0;
+    width: 100%;
+    height: 66%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+
+.painel-autenticacao {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.autenticacao-card {
+    width: 100%;
+    max-width: 1000px;
+    padding: 45px 55px;
+    background-color: #ffffff;
+    border: 5px solid #7200cf;
+    border-radius: 25px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+}
+
+.autenticacao-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.autenticacao-logo img {
+    width: 190px;
+    max-width: 75%;
+    height: auto;
+    display: block;
+}
+
+.form-cadastro {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 45px;
+}
+
+.etapa-cadastro {
+    display: block;
+    width: 100%;
+    padding: 25px;
+    background-color: #ffffff;
+    border: 2px solid var(--bg-second);
+    border-radius: 18px;
+}
+
+.etapa-email {
+    grid-column: 1 / -1;
+}
+
+.etapa-cadastro[data-etapa="3"] {
+    grid-column: 1 / -1;
+}
+
+.cabecalho-etapa {
+    width: 100%;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.numero-etapa {
+    display: block;
+    color: #333333;
+    font-size: 13px;
+}
+
+.barra-progresso {
+    width: 100%;
+    max-width: 270px;
+    height: 4px;
+    margin: 8px auto;
+    background-color: #c8c8c8;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progresso {
+    display: block;
+    height: 100%;
+    background-color: var(--element);
+    border-radius: 10px;
+}
+
+.progresso-1 {
+    width: 33%;
+}
+
+.progresso-2 {
+    width: 66%;
+}
+
+.progresso-3 {
+    width: 100%;
+}
+
+.cabecalho-etapa p {
+    margin: 0;
+    color: #555555;
+    font-size: 13px;
+}
+
+.form-grupo {
+    width: 100%;
+    margin-bottom: 22px;
+}
+
+.form-grupo label,
+.grupo-data legend {
+    display: block;
+    margin-bottom: 8px;
+    color: #000000;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.form-grupo input,
+.form-grupo select,
+.campo-data input,
+.campo-telefone select,
+.campo-telefone input {
+    width: 100%;
+    height: 43px;
+    padding: 0 13px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 3px solid #b8b8b8;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.form-grupo input::placeholder,
+.campo-data input::placeholder,
+.campo-telefone input::placeholder {
+    color: #999999;
+}
+
+.form-grupo input:focus,
+.form-grupo select:focus,
+.campo-data input:focus,
+.campo-telefone select:focus,
+.campo-telefone input:focus {
+    border-color: var(--element);
+    box-shadow: 0 0 0 3px rgba(109, 89, 173, 0.18);
+}
+
+.campo-senha {
+    position: relative;
+    width: 100%;
+}
+
+.campo-senha input {
+    padding-right: 50px;
+}
+
+.mensagem-erro {
+    display: block;
+    min-height: 16px;
+    margin-top: 5px;
+    color: #a40000;
+    font-size: 11px;
+}
+
+.botao-principal {
+    min-width: 135px;
+    min-height: 43px;
+    padding: 9px 22px;
+    background-color: var(--element);
+    color: #ffffff;
+    border: none;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(109, 89, 173, 0.25);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.botao-principal:hover {
+    background-color: #7200cf;
+    transform: translateY(-2px);
+    box-shadow: 0 11px 25px rgba(109, 89, 173, 0.35);
+}
+
+.botao-principal:active {
+    transform: translateY(0);
+}
+
+.etapa-email>.botao-principal {
+    display: block;
+    margin: 25px auto 0;
+}
+
+.divisor-login {
+    width: 100%;
+    margin: 22px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #555555;
+    font-size: 12px;
+}
+
+.divisor-login::before,
+.divisor-login::after {
+    content: "";
+    width: 80px;
+    height: 1px;
+    background-color: #c8c8c8;
+}
+
+.divisor-login span {
+    margin: 0 12px;
+}
+
+.login-social {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    display: flex;
+    gap: 15px;
+}
+
+.botao-social {
+    width: 100%;
+    min-height: 43px;
+    padding: 8px 15px;
+    background-color: #ffffff;
+    color: #111111;
+    border: 2px solid #b8b8b8;
+    border-radius: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        border-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.botao-social:hover {
+    color: var(--element);
+    border-color: var(--element);
+    transform: translateY(-2px);
+}
+
+.possui-conta {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.possui-conta p {
+    margin-bottom: 7px;
+    color: #222222;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.possui-conta a {
+    color: #111111;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.possui-conta a:hover {
+    color: var(--element);
+}
+
+.requisitos-senha {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.requisitos-senha p {
+    margin-bottom: 12px;
+    color: #555555;
+    font-size: 12px;
+    text-align: center;
+}
+
+.requisitos-senha ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.requisitos-senha li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #222222;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.indicador-requisito {
+    width: 14px;
+    min-width: 14px;
+    height: 14px;
+    background-color: #aaaaaa;
+    border-radius: 50%;
+}
+
+.requisitos-senha li.valido .indicador-requisito {
+    background-color: var(--element);
+}
+
+.requisitos-senha li.valido {
+    color: var(--element);
+}
+
+.grupo-data {
+    width: 100%;
+    margin: 0 0 22px;
+    padding: 0;
+    border: none;
+}
+
+.campos-data {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr;
+    gap: 10px;
+}
+
+.campo-data {
+    width: 100%;
+}
+
+.campo-data input {
+    padding: 0 8px;
+    text-align: center;
+}
+
+.label-acessivel {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+}
+
+.campo-telefone {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 105px 1fr;
+    gap: 10px;
+}
+
+.campo-telefone select {
+    padding: 0 8px;
+}
+
+.lista-termos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.termo-item {
+    position: relative;
+    min-height: 115px;
+    padding: 20px 15px 15px 48px;
+    background-color: #ffffff;
+    color: #111111;
+    border: 5px solid #b8b8b8;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition:
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.termo-item:hover {
+    border-color: var(--element);
+    transform: translateY(-2px);
+}
+
+.termo-item input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.checkbox-personalizado {
+    position: absolute;
+    top: 15px;
+    left: 14px;
+    width: 27px;
+    height: 27px;
+    background-color: #ffffff;
+    border: 2px solid #9b9b9b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.checkbox-personalizado i {
+    color: transparent;
+}
+
+.termo-item input:checked+.checkbox-personalizado {
+    border-color: var(--element);
+}
+
+.termo-item input:checked+.checkbox-personalizado i {
+    color: var(--element);
+}
+
+.texto-termo {
+    color: #222222;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.texto-termo a {
+    color: var(--element);
+    font-weight: 700;
+}
+
+.aviso-privacidade {
+    margin: 20px 0 0;
+    color: #555555;
+    font-size: 11px;
+    text-align: center;
+}
+
+.acoes-etapa {
+    width: 100%;
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.botao-voltar {
+    min-width: 110px;
+    min-height: 43px;
+    padding: 9px 20px;
+    background-color: transparent;
+    color: var(--element);
+    border: 2px solid var(--element);
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+.botao-voltar:hover {
+    background-color: var(--element);
+    color: #ffffff;
+}
+
+.campo-invalido {
+    border-color: #b90000 !important;
+}
+
+.campo-valido {
+    border-color: var(--element) !important;
+}
+
+.termo-item.termo-invalido {
+    border-color: #b90000;
+}
+
+@media (min-width: 769px) {
+
+    .autenticacao-card {
+        max-width: 950px;
+        min-height: 620px;
+    }
+
+    .form-cadastro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        align-items: start;
+    }
+
+    .etapa-cadastro {
+        display: none;
+    }
+
+
+    .etapa-cadastro.ativa-desktop[data-etapa="email"],
+    .etapa-cadastro.ativa-desktop[data-etapa="1"] {
+        display: block;
+    }
+
+    .etapa-cadastro.ativa-desktop[data-etapa="2"],
+    .etapa-cadastro.ativa-desktop[data-etapa="3"] {
+        display: block;
+        grid-column: 1 / -1;
+        width: 100%;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    .etapa-cadastro[data-etapa="email"]>.botao-avancar {
+        display: none;
+    }
+
+    .etapa-cadastro[data-etapa="1"] .botao-voltar {
+        display: none;
+    }
+
+    .etapa-cadastro[data-etapa="email"] .cabecalho-etapa {
+        display: none;
+    }
+
+    .etapa-cadastro[data-etapa="1"] .numero-etapa::after {
+        content: "Passo 1 de 3";
+        font-size: 13px;
+    }
+
+    .etapa-cadastro[data-etapa="1"] .numero-etapa {
+        font-size: 0;
+    }
+
+    .etapa-cadastro[data-etapa="2"] .numero-etapa::after {
+        content: "Passo 2 de 3";
+        font-size: 13px;
+    }
+
+    .etapa-cadastro[data-etapa="2"] .numero-etapa {
+        font-size: 0;
+    }
+
+    .etapa-cadastro[data-etapa="3"] .numero-etapa::after {
+        content: "Passo 3 de 3";
+        font-size: 13px;
+    }
+
+    .etapa-cadastro[data-etapa="3"] .numero-etapa {
+        font-size: 0;
+    }
+
+    .etapa-cadastro[data-etapa="1"] .progresso {
+        width: 33%;
+    }
+
+    .etapa-cadastro[data-etapa="2"] .progresso {
+        width: 66%;
+    }
+
+    .etapa-cadastro[data-etapa="3"] .progresso {
+        width: 100%;
+    }
+
+    .acoes-etapa {
+        grid-column: 1 / -1;
+    }
+
+    .etapa-cadastro[data-etapa="1"] .acoes-etapa {
+        justify-content: center;
+    }
+
+    .etapa-cadastro[data-etapa="2"] .acoes-etapa,
+    .etapa-cadastro[data-etapa="3"] .acoes-etapa {
+        justify-content: space-between;
+    }
+
+    .etapa-email .login-social,
+    .etapa-email .divisor-login,
+    .etapa-email .possui-conta {
+        display: flex;
+    }
+
+    .etapa-email .possui-conta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .etapa-cadastro[data-etapa="email"],
+    .etapa-cadastro[data-etapa="1"] {
+        min-height: 390px;
+    }
+
+    .etapa-cadastro[data-etapa="email"] {
+        grid-column: 1;
+    }
+
+    .etapa-cadastro[data-etapa="1"] {
+        grid-column: 2;
+    }
+
+    .etapa-cadastro[data-etapa="email"] .form-grupo,
+    .etapa-cadastro[data-etapa="1"] .form-grupo {
+        margin-top: 25px;
+    }
+
+    .etapa-cadastro[data-etapa="1"] .acoes-etapa {
+        margin-top: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .pagina-autenticacao {
+        min-height: 100vh;
+        padding: 45px 28px;
+        align-items: center;
+    }
+
+    .pagina-autenticacao::before {
+        height: 33%;
+    }
+
+    .pagina-autenticacao::after {
+        top: 33%;
+        height: 67%;
+    }
+
+    .autenticacao-card {
+        width: 100%;
+        max-width: 430px;
+        min-height: 540px;
+        padding: 35px 30px;
+        border-width: 5px;
+        border-radius: 22px;
+    }
+
+    .autenticacao-logo {
+        margin-bottom: 22px;
+    }
+
+    .autenticacao-logo img {
+        width: 160px;
+    }
+
+    .form-cadastro {
+        display: block;
+    }
+
+    .etapa-cadastro {
+        display: none;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+    }
+
+    .etapa-cadastro.ativa {
+        display: block;
+        animation: entradaEtapa 0.35s ease;
+    }
+
+    .form-grupo {
+        margin-bottom: 20px;
+    }
+
+    .form-grupo label,
+    .grupo-data legend {
+        font-size: 16px;
+    }
+
+    .login-social {
+        max-width: 290px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .lista-termos {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .termo-item {
+        min-height: 80px;
+    }
+
+    .acoes-etapa {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .pagina-autenticacao {
+        padding: 35px 28px;
+    }
+
+    .autenticacao-card {
+        min-height: 410px;
+        padding: 26px 28px;
+        border-width: 4px;
+        border-radius: 20px;
+    }
+
+    .autenticacao-logo {
+        margin-bottom: 18px;
+    }
+
+    .autenticacao-logo img {
+        width: 140px;
+    }
+
+    .cabecalho-etapa {
+        margin-bottom: 20px;
+    }
+
+    .numero-etapa {
+        font-size: 11px;
+    }
+
+    .barra-progresso {
+        max-width: 170px;
+        height: 3px;
+        margin-top: 6px;
+        margin-bottom: 6px;
+    }
+
+    .cabecalho-etapa p {
+        font-size: 11px;
+    }
+
+    .form-grupo {
+        margin-bottom: 17px;
+    }
+
+    .form-grupo label,
+    .grupo-data legend {
+        margin-bottom: 6px;
+        font-size: 15px;
+    }
+
+    .form-grupo input,
+    .form-grupo select,
+    .campo-data input,
+    .campo-telefone select,
+    .campo-telefone input {
+        height: 38px;
+        padding: 0 10px;
+        border-width: 2px;
+        border-radius: 8px;
+        font-size: 11px;
+    }
+
+
+    .botao-principal {
+        min-width: 115px;
+        min-height: 39px;
+        padding: 8px 18px;
+        font-size: 13px;
+    }
+
+    .etapa-email>.botao-principal {
+        margin-top: 20px;
+    }
+
+    .divisor-login {
+        margin: 18px 0;
+        font-size: 10px;
+    }
+
+    .divisor-login::before,
+    .divisor-login::after {
+        width: 50px;
+    }
+
+    .login-social {
+        max-width: 220px;
+        gap: 12px;
+    }
+
+    .botao-social {
+        min-height: 38px;
+        padding: 7px 12px;
+        border-radius: 20px;
+        font-size: 11px;
+    }
+
+    .possui-conta {
+        margin-top: 25px;
+    }
+
+    .possui-conta p,
+    .possui-conta a {
+        font-size: 11px;
+    }
+
+    .requisitos-senha p {
+        font-size: 10px;
+    }
+
+    .requisitos-senha li {
+        margin-bottom: 10px;
+        gap: 9px;
+        font-size: 11px;
+    }
+
+    .indicador-requisito {
+        width: 13px;
+        min-width: 13px;
+        height: 13px;
+    }
+
+    .campos-data {
+        gap: 7px;
+    }
+
+    .campo-telefone {
+        grid-template-columns: 78px 1fr;
+        gap: 7px;
+    }
+
+    .lista-termos {
+        gap: 10px;
+    }
+
+    .termo-item {
+        min-height: 65px;
+        padding: 14px 10px 12px 42px;
+        border-width: 4px;
+    }
+
+    .checkbox-personalizado {
+        top: 10px;
+        left: 9px;
+        width: 25px;
+        height: 25px;
+        font-size: 23px;
+    }
+
+    .texto-termo {
+        font-size: 9px;
+    }
+
+    .aviso-privacidade {
+        margin-top: 13px;
+        font-size: 8px;
+    }
+
+    .acoes-etapa {
+        margin-top: 23px;
+        gap: 10px;
+    }
+
+    .botao-voltar {
+        min-width: 90px;
+        min-height: 39px;
+        padding: 7px 14px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .pagina-autenticacao {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+
+    .autenticacao-card {
+        padding-right: 21px;
+        padding-left: 21px;
+    }
+
+    .campos-data {
+        grid-template-columns: 1fr 1fr 1.15fr;
+    }
+}
+
+@keyframes entradaEtapa {
+
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,320 @@
+.pagina-autenticacao {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 70px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.pagina-autenticacao::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 38%;
+    background-image:
+        linear-gradient(rgba(36, 36, 36, 0.15),
+            rgba(36, 36, 36, 0.35)),
+        url("../IMG/piano\ car\ gamer.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+
+.pagina-autenticacao::after {
+    content: "";
+    position: absolute;
+    top: 38%;
+    left: 0;
+    width: 100%;
+    height: 62%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+
+.painel-autenticacao {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.autenticacao-card {
+    width: 100%;
+    max-width: 430px;
+    min-height: 570px;
+    padding: 45px 45px;
+    background-color: #ffffff;
+    border: 5px solid #7200cf;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+}
+
+.autenticacao-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 28px;
+}
+
+.autenticacao-logo img {
+    width: 180px;
+    max-width: 75%;
+    height: auto;
+    display: block;
+}
+
+.form-login {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-grupo {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.form-grupo label {
+    display: block;
+    margin-bottom: 8px;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.form-grupo input,
+.form-grupo select {
+    width: 100%;
+    height: 44px;
+    padding: 0 14px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 3px solid #b8b8b8;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.form-grupo input::placeholder {
+    color: #9b9b9b;
+}
+
+.form-grupo input:focus,
+.form-grupo select:focus {
+    border-color: var(--element);
+    box-shadow: 0 0 0 3px rgba(109, 89, 173, 0.18);
+}
+
+.campo-senha {
+    position: relative;
+    width: 100%;
+}
+
+.campo-senha input {
+    padding-right: 50px;
+}
+
+.link-esqueci-senha {
+    display: block;
+    width: max-content;
+    margin-top: 6px;
+    margin-left: auto;
+    color: #333333;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+.link-esqueci-senha:hover {
+    color: var(--element);
+}
+
+.botao-principal {
+    min-width: 145px;
+    min-height: 45px;
+    padding: 10px 25px;
+    margin: 65px auto 0;
+    background-color: var(--element);
+    color: #ffffff;
+    border: none;
+    border-radius: 9px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(109, 89, 173, 0.25);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.botao-principal:hover {
+    background-color: #7200cf;
+    transform: translateY(-2px);
+    box-shadow: 0 11px 25px rgba(109, 89, 173, 0.35);
+}
+
+.botao-principal:active {
+    transform: translateY(0);
+}
+
+.link-criar-conta {
+    margin-top: 30px;
+    color: #333333;
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+.link-criar-conta:hover {
+    color: var(--element);
+}
+
+.campo-invalido {
+    border-color: #b90000 !important;
+}
+
+.campo-valido {
+    border-color: var(--element) !important;
+}
+
+.termo-item.termo-invalido {
+    border-color: #b90000;
+}
+
+
+@media (max-width: 768px) {
+
+    .pagina-autenticacao {
+        padding: 55px 26px;
+        align-items: center;
+    }
+
+    .pagina-autenticacao::before {
+        height: 33%;
+    }
+
+    .pagina-autenticacao::after {
+        top: 33%;
+        height: 67%;
+    }
+
+    .autenticacao-card {
+        max-width: 390px;
+        min-height: 545px;
+        padding: 38px 35px;
+        border-width: 5px;
+        border-radius: 22px;
+    }
+
+    .autenticacao-logo {
+        margin-bottom: 24px;
+    }
+
+    .autenticacao-logo img {
+        width: 155px;
+    }
+
+    .form-grupo {
+        margin-bottom: 22px;
+    }
+
+    .form-grupo label {
+        font-size: 17px;
+    }
+
+    .form-grupo input,
+    .form-grupo select {
+        height: 42px;
+        border-width: 3px;
+    }
+
+    .botao-principal {
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .pagina-autenticacao {
+        min-height: 100vh;
+        padding: 40px 28px;
+    }
+
+    .autenticacao-card {
+        min-height: 410px;
+        padding: 28px 28px;
+        border-width: 4px;
+        border-radius: 20px;
+    }
+
+    .autenticacao-logo {
+        margin-bottom: 22px;
+    }
+
+    .autenticacao-logo img {
+        width: 140px;
+    }
+
+    .form-grupo {
+        margin-bottom: 20px;
+    }
+
+    .form-grupo label {
+        margin-bottom: 6px;
+        font-size: 15px;
+    }
+
+    .form-grupo input,
+    .form-grupo select {
+        height: 38px;
+        padding: 0 11px;
+        border-width: 2px;
+        border-radius: 8px;
+        font-size: 12px;
+    }
+    
+    .link-esqueci-senha {
+        font-size: 10px;
+    }
+
+    .botao-principal {
+        min-width: 120px;
+        min-height: 40px;
+        padding: 8px 20px;
+        margin-top: 45px;
+        font-size: 14px;
+    }
+
+    .link-criar-conta {
+        margin-top: 23px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .pagina-autenticacao {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+
+    .autenticacao-card {
+        padding-right: 22px;
+        padding-left: 22px;
+    }
+}
