@@ -134,12 +134,12 @@
     <hr>
     <div class="blog_extras">
 
-        <a href="./blog2.php?produto=caraTocandoViolao">
-            <img src="./IMG/caraTocandoViolao_banner.jpg" alt="">
+        <a href="./blog2.php?produto=banda_antiga">
+            <img src="./IMG/banda_antiga.png" alt="">
         </a>
         <div class="texto">
-            <h2>10 práticas úteis na hora de aprender a tocar um instrumento</h2>
-            <p>autor: Carlos</p>
+            <h2>Como a música evoluiu ao longo do tempo</h2>
+            <p>autor: Joana</p>
         </div>
 
     </div>

@@ -39,7 +39,7 @@
 
     <div class="pessoa_blog">
 
-       <a href=""><img src="./IMG/meninaTocandoViolino_blog.png" alt=""></a>
+        <a href=""><img src="./IMG/foto_perfil4.jpg" alt=""></a>
         <h2>Autor: Maria</h2>
 
     </div>
@@ -48,8 +48,10 @@
 
     <div class="pessoa">
 
-        <img src="./IMG/meninaTocandoViolino_blog.png" alt="">
-        <div class="gg">Escreva seu comentário</div>
+        <img src="./IMG/foto_perfil.jpg" alt="">
+        <div class="gg">
+            <input type="text" class="form-control" placeholder="Escreva seu comentário">
+        </div>
 
 
     </div>
@@ -65,7 +67,7 @@
 
                 <div class="box_comentario">
 
-                    <img src="./IMG/meninaTocandoViolino_blog.png" alt="">
+                    <img src="./IMG/foto_perfil3.jpg" alt="">
 
                     <div class="conteudo">
                         <h4>Roberto <span>há 1 hora</span></h4>
@@ -100,7 +102,7 @@
 
                         <div class="box_comentario">
 
-                            <img src="./IMG/img_piano.png" alt="">
+                            <img src="./IMG//foto_perfil2.jpg" alt="">
 
                             <div class="conteudo">
                                 <h4>Felipe <span>há 45 min</span></h4>
@@ -135,7 +137,7 @@
 
                                 <div class="box_comentario">
 
-                                    <img src="./IMG/image 2.webp" alt="">
+                                    <img src="./IMG/foto_perfil5.jpg" alt="">
 
                                     <div class="conteudo">
                                         <h4>Anom <span>há 10 min</span></h4>
@@ -182,7 +184,7 @@
 
                 <div class="box_comentario">
 
-                    <img src="./IMG/caraTocandoViolao_banner.jpg" alt="">
+                    <img src="./IMG/foto_perfil3.jpg" alt="">
 
                     <div class="conteudo">
 

@@ -8,9 +8,10 @@
 
 :root{
 
-  --bg: #242424 !important;
-  --bg-second: #9fb2e9 !important;
-  --element: #6d59ad !important;
+    --bg: #242424 !important;
+    --bg-second: #9fb2e9 !important;
+    --element: #6d59ad !important;
+
 }
 
 body{
