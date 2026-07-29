@@ -31,7 +31,7 @@
 
             <img id="imagem-produto" class="duvida1 mx-3">
 
-            <p id="preco-produto" class="aa mx-4 mt-4"></p>
+            <p id="preco-produto" class="info mx-4 mt-4"></p>
 
         </div>
 
@@ -39,7 +39,7 @@
 
     <div class="pessoa_blog">
 
-        <a href=""><img src="./IMG/foto_perfil4.jpg" alt=""></a>
+        <a href="./blog_perfil.php"><img src="./IMG/foto_perfil4.jpg" alt=""></a>
         <h2>Autor: Maria</h2>
 
     </div>

@@ -88,8 +88,3 @@ else if(produto == "banda_antiga"){
 
     preco.innerHTML = "Ao longo das décadas, os instrumentos, os estilos e as formas de gravar músicas mudaram bastante. Mesmo com toda essa evolução, a paixão por tocar, aprender e compartilhar música continua sendo a mesma, conectando diferentes gerações. Esses títulos e histórias são curtos, ideais para um blog de uma escola de música. Eles introduzem o tema de cada imagem de forma clara e deixam espaço para você complementar com informações, curiosidades ou dicas ao longo da publicação.";
 }
-
-
-
-
-
